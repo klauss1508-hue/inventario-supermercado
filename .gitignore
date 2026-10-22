@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+# Archivo pesado: se regenera con src/generar_datos.py
+data/raw/*.db
+# Notas de trabajo con el asistente de IA (solo locales)
+CLAUDE.md
+.claude/

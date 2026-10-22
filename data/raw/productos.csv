@@ -1,0 +1,501 @@
+sku,categoria,nombre,costo_unitario,precio_venta,lead_time_dias,proveedor
+SKU0001,Lácteos y Refrigerados,Queso edam 400 g - Valle Dorado,9.34,11.2,2,Proveedor 06
+SKU0002,Bebidas,Té helado 500 ml - Casa Limpia,5.23,6.2,7,Proveedor 03
+SKU0003,Abarrotes,Harina preparada 500 g - Costa Verde,14.3,18.9,10,Proveedor 03
+SKU0004,Abarrotes,Sal de mesa 500 g - Costa Verde,10.34,12.1,6,Proveedor 08
+SKU0005,Bebidas,Gaseosa cola 500 ml - Brisa Andina,1.9,2.3,5,Proveedor 10
+SKU0006,Cuidado Personal,Pañales 60 und - Sol Naciente,4.02,4.5,6,Proveedor 08
+SKU0007,Abarrotes,Avena en hojuelas 300 g - Costa Verde,6.55,7.8,4,Proveedor 08
+SKU0008,Cuidado Personal,Shampoo 750 ml - Casa Limpia,17.57,23.3,10,Proveedor 11
+SKU0009,Cuidado Personal,Acondicionador 400 ml - Campo Fresco,14.06,18.8,5,Proveedor 07
+SKU0010,Abarrotes,Atún en conserva 170 g - Campo Fresco,6.8,9.1,4,Proveedor 02
+SKU0011,Limpieza,Lavavajilla 900 g - Casa Limpia,10.98,14.8,5,Proveedor 03
+SKU0012,Bebidas,Jugo de frutas 1 L - Campo Fresco,5.58,7.2,3,Proveedor 10
+SKU0013,Limpieza,Esponja de cocina 4 und - Mar Azul,8.5,9.9,7,Proveedor 08
+SKU0014,Cuidado Personal,Shampoo 750 ml - Pampa Real,10.9,12.7,12,Proveedor 08
+SKU0015,Lácteos y Refrigerados,Crema de leche 200 g - Mar Azul,20.58,24.0,2,Proveedor 04
+SKU0016,Bebidas,Gaseosa lima-limón 500 ml - Brisa Andina,3.6,4.4,5,Proveedor 04
+SKU0017,Abarrotes,Azúcar rubia 5 kg - Costa Verde,5.41,6.8,9,Proveedor 06
+SKU0018,Lácteos y Refrigerados,Jamón de pavo 100 g - Campo Fresco,5.36,6.2,2,Proveedor 01
+SKU0019,Bebidas,Chicha morada 1 L - Casa Limpia,4.27,5.2,6,Proveedor 04
+SKU0020,Abarrotes,Avena en hojuelas 300 g - Valle Dorado,7.22,8.5,5,Proveedor 04
+SKU0021,Bebidas,Chicha morada 500 ml - Pampa Real,5.28,6.3,4,Proveedor 07
+SKU0022,Cuidado Personal,Shampoo 750 ml - Nevado,30.06,38.9,5,Proveedor 02
+SKU0023,Cuidado Personal,Afeitadora desechable 2 und - Campo Fresco,16.54,20.3,8,Proveedor 01
+SKU0024,Limpieza,Suavizante de ropa 900 ml - Tierra Fértil,3.79,4.4,9,Proveedor 09
+SKU0025,Limpieza,Suavizante de ropa 2 L - Valle Dorado,22.28,26.1,8,Proveedor 07
+SKU0026,Lácteos y Refrigerados,Jamón de pavo 100 g - Mar Azul,2.59,3.3,2,Proveedor 05
+SKU0027,Lácteos y Refrigerados,Hot dog 12 und - Pampa Real,5.15,6.9,3,Proveedor 11
+SKU0028,Abarrotes,Arroz extra 5 kg - Brisa Andina,7.41,9.2,10,Proveedor 11
+SKU0029,Cuidado Personal,Acondicionador 200 ml - Brisa Andina,4.76,6.3,10,Proveedor 08
+SKU0030,Limpieza,Bolsas de basura 10 und - Nevado,9.71,12.7,12,Proveedor 02
+SKU0031,Lácteos y Refrigerados,Leche fresca 1 L - Mar Azul,5.59,6.4,4,Proveedor 09
+SKU0032,Abarrotes,Aceite vegetal 5 L - Sol Naciente,5.11,5.9,8,Proveedor 10
+SKU0033,Abarrotes,Azúcar rubia 1 kg - Costa Verde,5.5,6.9,10,Proveedor 04
+SKU0034,Abarrotes,Café molido 100 g - Campo Fresco,6.47,7.4,4,Proveedor 09
+SKU0035,Limpieza,Papel higiénico 12 rollos - Mar Azul,4.85,5.9,11,Proveedor 03
+SKU0036,Limpieza,Detergente en polvo 2 kg - Sol Naciente,15.9,18.1,9,Proveedor 10
+SKU0037,Lácteos y Refrigerados,Crema de leche 500 g - Campo Fresco,7.2,8.5,4,Proveedor 10
+SKU0038,Bebidas,Chicha morada 1 L - Campo Fresco,4.69,5.4,3,Proveedor 12
+SKU0039,Bebidas,Gaseosa cola 1.5 L - Costa Verde,3.93,4.5,6,Proveedor 05
+SKU0040,Bebidas,Bebida rehidratante 1 L - Mar Azul,1.68,1.9,3,Proveedor 08
+SKU0041,Abarrotes,Atún en conserva 170 g - Costa Verde,9.2,10.7,5,Proveedor 02
+SKU0042,Bebidas,Néctar de durazno 1 L - Costa Verde,6.38,7.6,7,Proveedor 01
+SKU0043,Lácteos y Refrigerados,Mantequilla 200 g - Casa Limpia,4.91,5.5,4,Proveedor 01
+SKU0044,Bebidas,Gaseosa cola 3 L - Costa Verde,7.42,9.0,4,Proveedor 05
+SKU0045,Lácteos y Refrigerados,Queso edam 400 g - Mar Azul,4.88,6.6,3,Proveedor 01
+SKU0046,Bebidas,Jugo de frutas 1 L - Sol Naciente,2.57,3.2,7,Proveedor 12
+SKU0047,Bebidas,Agua sin gas 2.5 L - Campo Fresco,4.47,5.5,4,Proveedor 06
+SKU0048,Limpieza,Bolsas de basura 30 und - Tierra Fértil,7.9,9.8,11,Proveedor 09
+SKU0049,Cuidado Personal,Cepillo dental 1 und - Valle Dorado,2.86,3.6,11,Proveedor 02
+SKU0050,Limpieza,Bolsas de basura 10 und - Sol Naciente,8.12,10.5,5,Proveedor 07
+SKU0051,Abarrotes,Salsa de tomate 200 g - Casa Limpia,3.33,4.1,5,Proveedor 07
+SKU0052,Lácteos y Refrigerados,Jamón de pavo 250 g - Mar Azul,14.46,18.3,2,Proveedor 11
+SKU0053,Lácteos y Refrigerados,Yogurt de fruta 1 L - Casa Limpia,15.84,18.1,4,Proveedor 05
+SKU0054,Cuidado Personal,Pañales 30 und - Casa Limpia,9.11,12.0,9,Proveedor 02
+SKU0055,Lácteos y Refrigerados,Queso edam 400 g - Casa Limpia,6.68,8.8,3,Proveedor 05
+SKU0056,Limpieza,Desinfectante 650 ml - Sol Naciente,4.22,4.8,10,Proveedor 03
+SKU0057,Limpieza,Papel higiénico 12 rollos - Sol Naciente,5.77,6.5,11,Proveedor 10
+SKU0058,Abarrotes,Fideos spaghetti 250 g - Nevado,15.51,18.7,6,Proveedor 07
+SKU0059,Cuidado Personal,Pasta dental 100 ml - Sol Naciente,6.37,7.5,6,Proveedor 06
+SKU0060,Cuidado Personal,Afeitadora desechable 4 und - Costa Verde,14.47,16.4,7,Proveedor 12
+SKU0061,Abarrotes,Mermelada de fresa 250 g - Nevado,10.79,13.7,8,Proveedor 06
+SKU0062,Abarrotes,Galletas de soda 6 und - Nevado,8.3,9.5,10,Proveedor 09
+SKU0063,Abarrotes,Harina preparada 500 g - Pampa Real,4.56,5.3,4,Proveedor 03
+SKU0064,Lácteos y Refrigerados,Crema de leche 200 g - Tierra Fértil,4.53,5.2,3,Proveedor 08
+SKU0065,Bebidas,Té helado 1.5 L - Casa Limpia,1.74,2.1,5,Proveedor 11
+SKU0066,Abarrotes,Chocolate de taza 90 g - Sol Naciente,3.93,4.5,4,Proveedor 09
+SKU0067,Bebidas,Néctar de durazno 300 ml - Nevado,3.42,4.4,5,Proveedor 03
+SKU0068,Limpieza,Lejía 4 L - Costa Verde,4.0,4.5,9,Proveedor 07
+SKU0069,Lácteos y Refrigerados,Queso edam 200 g - Casa Limpia,6.48,8.0,2,Proveedor 10
+SKU0070,Limpieza,Esponja de cocina 4 und - Valle Dorado,6.5,8.6,11,Proveedor 07
+SKU0071,Bebidas,Gaseosa lima-limón 1.5 L - Tierra Fértil,10.78,14.4,5,Proveedor 02
+SKU0072,Abarrotes,Mermelada de fresa 500 g - Brisa Andina,7.26,9.3,8,Proveedor 07
+SKU0073,Bebidas,Gaseosa lima-limón 500 ml - Sol Naciente,2.26,2.7,4,Proveedor 08
+SKU0074,Cuidado Personal,Cepillo dental 2 und - Casa Limpia,4.86,5.7,11,Proveedor 02
+SKU0075,Abarrotes,Arroz extra 1 kg - Sol Naciente,3.58,4.8,5,Proveedor 12
+SKU0076,Cuidado Personal,Toallas higiénicas 16 und - Costa Verde,11.19,15.0,6,Proveedor 06
+SKU0077,Lácteos y Refrigerados,Hot dog 12 und - Costa Verde,7.75,10.4,4,Proveedor 11
+SKU0078,Limpieza,Detergente en polvo 800 g - Casa Limpia,21.36,27.2,11,Proveedor 09
+SKU0079,Abarrotes,Fideos tallarín 250 g - Valle Dorado,14.7,18.3,9,Proveedor 03
+SKU0080,Abarrotes,Sal de mesa 500 g - Pampa Real,25.04,31.0,8,Proveedor 10
+SKU0081,Lácteos y Refrigerados,Postre de gelatina 120 g - Mar Azul,15.73,20.0,3,Proveedor 08
+SKU0082,Lácteos y Refrigerados,Hot dog 6 und - Tierra Fértil,8.78,11.8,4,Proveedor 06
+SKU0083,Abarrotes,Leche evaporada 170 g - Mar Azul,2.66,3.5,9,Proveedor 03
+SKU0084,Cuidado Personal,Shampoo 400 ml - Mar Azul,4.46,5.1,6,Proveedor 09
+SKU0085,Bebidas,Néctar de durazno 300 ml - Valle Dorado,4.53,5.2,4,Proveedor 09
+SKU0086,Lácteos y Refrigerados,Leche fresca 1 L - Pampa Real,6.09,7.8,3,Proveedor 01
+SKU0087,Limpieza,Detergente en polvo 2 kg - Mar Azul,4.26,5.0,12,Proveedor 04
+SKU0088,Abarrotes,Atún en conserva 170 g - Pampa Real,4.09,4.6,6,Proveedor 08
+SKU0089,Cuidado Personal,Pasta dental 75 ml - Brisa Andina,3.01,3.5,10,Proveedor 06
+SKU0090,Bebidas,Gaseosa cola 500 ml - Pampa Real,4.18,5.6,3,Proveedor 06
+SKU0091,Abarrotes,Chocolate de taza 180 g - Mar Azul,9.06,12.1,4,Proveedor 02
+SKU0092,Cuidado Personal,Shampoo 400 ml - Campo Fresco,8.83,11.5,12,Proveedor 12
+SKU0093,Abarrotes,Café molido 200 g - Brisa Andina,7.62,9.1,10,Proveedor 10
+SKU0094,Lácteos y Refrigerados,Queso fresco 500 g - Brisa Andina,10.29,13.5,3,Proveedor 11
+SKU0095,Abarrotes,Arroz extra 5 kg - Costa Verde,28.21,33.2,5,Proveedor 08
+SKU0096,Lácteos y Refrigerados,Leche fresca 946 ml - Valle Dorado,2.82,3.3,4,Proveedor 11
+SKU0097,Abarrotes,Mayonesa 180 g - Mar Azul,4.63,6.0,10,Proveedor 08
+SKU0098,Cuidado Personal,Shampoo 400 ml - Valle Dorado,22.55,27.0,8,Proveedor 06
+SKU0099,Cuidado Personal,Jabón de tocador 90 g - Mar Azul,11.88,14.1,5,Proveedor 10
+SKU0100,Abarrotes,Chocolate de taza 180 g - Tierra Fértil,1.18,1.6,4,Proveedor 01
+SKU0101,Abarrotes,Sal de mesa 1 kg - Tierra Fértil,16.33,18.6,4,Proveedor 07
+SKU0102,Abarrotes,Frijol canario 500 g - Mar Azul,2.01,2.6,4,Proveedor 05
+SKU0103,Abarrotes,Café molido 100 g - Valle Dorado,4.99,6.4,5,Proveedor 02
+SKU0104,Bebidas,Néctar de durazno 300 ml - Campo Fresco,1.28,1.6,7,Proveedor 09
+SKU0105,Cuidado Personal,Pañales 30 und - Pampa Real,10.21,13.5,11,Proveedor 04
+SKU0106,Limpieza,Papel higiénico 4 rollos - Campo Fresco,6.96,9.3,11,Proveedor 11
+SKU0107,Abarrotes,Arroz extra 5 kg - Campo Fresco,7.78,9.9,4,Proveedor 10
+SKU0108,Limpieza,Bolsas de basura 30 und - Pampa Real,7.55,9.8,12,Proveedor 06
+SKU0109,Abarrotes,Arroz extra 5 kg - Valle Dorado,7.99,9.0,10,Proveedor 01
+SKU0110,Cuidado Personal,Toallas higiénicas 8 und - Casa Limpia,8.48,10.9,8,Proveedor 09
+SKU0111,Cuidado Personal,Toallas higiénicas 16 und - Brisa Andina,10.57,12.9,10,Proveedor 07
+SKU0112,Cuidado Personal,Acondicionador 200 ml - Mar Azul,25.61,32.3,9,Proveedor 02
+SKU0113,Limpieza,Lejía 4 L - Campo Fresco,5.37,6.5,9,Proveedor 06
+SKU0114,Abarrotes,Arroz extra 750 g - Brisa Andina,13.96,16.5,4,Proveedor 01
+SKU0115,Cuidado Personal,Crema corporal 200 ml - Mar Azul,8.46,10.3,7,Proveedor 04
+SKU0116,Limpieza,Lejía 1 L - Pampa Real,3.75,4.8,10,Proveedor 03
+SKU0117,Bebidas,Chicha morada 500 ml - Costa Verde,3.31,4.3,7,Proveedor 09
+SKU0118,Bebidas,Cerveza rubia 650 ml - Casa Limpia,9.92,13.1,7,Proveedor 11
+SKU0119,Bebidas,Agua sin gas 625 ml - Nevado,6.19,7.4,5,Proveedor 09
+SKU0120,Limpieza,Lejía 4 L - Nevado,4.45,5.8,12,Proveedor 02
+SKU0121,Cuidado Personal,Toallas higiénicas 8 und - Pampa Real,17.79,20.4,6,Proveedor 05
+SKU0122,Abarrotes,Arroz extra 5 kg - Sol Naciente,5.1,6.5,9,Proveedor 01
+SKU0123,Limpieza,Detergente en polvo 2 kg - Valle Dorado,9.58,11.3,6,Proveedor 04
+SKU0124,Cuidado Personal,Shampoo 400 ml - Casa Limpia,3.48,4.3,10,Proveedor 09
+SKU0125,Lácteos y Refrigerados,Postre de gelatina 6 und - Brisa Andina,14.51,18.8,2,Proveedor 02
+SKU0126,Limpieza,Detergente en polvo 4 kg - Mar Azul,9.11,10.8,11,Proveedor 08
+SKU0127,Bebidas,Cerveza rubia 355 ml - Tierra Fértil,2.47,2.9,6,Proveedor 07
+SKU0128,Abarrotes,Harina preparada 500 g - Nevado,12.51,14.4,9,Proveedor 07
+SKU0129,Bebidas,Agua con gas 1 L - Pampa Real,2.83,3.5,5,Proveedor 05
+SKU0130,Bebidas,Agua con gas 625 ml - Pampa Real,8.77,11.3,5,Proveedor 10
+SKU0131,Bebidas,Agua con gas 1 L - Costa Verde,12.43,14.3,3,Proveedor 05
+SKU0132,Lácteos y Refrigerados,Postre de gelatina 6 und - Sol Naciente,9.73,12.4,3,Proveedor 10
+SKU0133,Bebidas,Néctar de durazno 1 L - Casa Limpia,2.48,2.9,6,Proveedor 01
+SKU0134,Limpieza,Lavavajilla 900 g - Valle Dorado,2.31,3.1,10,Proveedor 04
+SKU0135,Limpieza,Lejía 4 L - Pampa Real,5.36,7.2,6,Proveedor 05
+SKU0136,Bebidas,Néctar de durazno 300 ml - Costa Verde,10.05,12.0,4,Proveedor 12
+SKU0137,Abarrotes,Fideos tallarín 250 g - Mar Azul,5.44,6.3,9,Proveedor 05
+SKU0138,Cuidado Personal,Jabón de tocador 90 g - Brisa Andina,18.03,24.0,12,Proveedor 07
+SKU0139,Lácteos y Refrigerados,Hot dog 6 und - Brisa Andina,4.36,5.7,3,Proveedor 05
+SKU0140,Abarrotes,Leche evaporada 400 g - Campo Fresco,11.13,14.1,6,Proveedor 12
+SKU0141,Cuidado Personal,Desodorante 150 ml - Mar Azul,7.81,10.2,8,Proveedor 07
+SKU0142,Lácteos y Refrigerados,Yogurt natural 500 g - Valle Dorado,6.15,6.9,3,Proveedor 05
+SKU0143,Cuidado Personal,Cepillo dental 2 und - Valle Dorado,14.9,17.9,6,Proveedor 06
+SKU0144,Cuidado Personal,Toallas higiénicas 16 und - Valle Dorado,2.01,2.5,5,Proveedor 12
+SKU0145,Limpieza,Desinfectante 1.8 L - Pampa Real,15.87,20.4,9,Proveedor 10
+SKU0146,Bebidas,Agua con gas 1 L - Brisa Andina,4.43,5.9,3,Proveedor 12
+SKU0147,Bebidas,Bebida rehidratante 1 L - Sol Naciente,9.46,10.9,6,Proveedor 02
+SKU0148,Abarrotes,Chocolate de taza 180 g - Brisa Andina,7.09,9.2,7,Proveedor 12
+SKU0149,Abarrotes,Café molido 200 g - Costa Verde,4.89,6.0,5,Proveedor 02
+SKU0150,Limpieza,Detergente en polvo 2 kg - Casa Limpia,10.86,13.6,11,Proveedor 07
+SKU0151,Bebidas,Bebida rehidratante 500 ml - Sol Naciente,4.47,5.3,4,Proveedor 10
+SKU0152,Lácteos y Refrigerados,Yogurt natural 1 L - Costa Verde,8.9,11.5,4,Proveedor 12
+SKU0153,Bebidas,Néctar de durazno 300 ml - Mar Azul,4.11,5.0,7,Proveedor 06
+SKU0154,Abarrotes,Quinua 500 g - Casa Limpia,3.26,3.9,8,Proveedor 12
+SKU0155,Abarrotes,Leche evaporada 400 g - Brisa Andina,5.13,6.1,4,Proveedor 06
+SKU0156,Bebidas,Chicha morada 1 L - Sol Naciente,2.72,3.4,6,Proveedor 04
+SKU0157,Bebidas,Néctar de durazno 1 L - Campo Fresco,7.13,8.2,4,Proveedor 11
+SKU0158,Abarrotes,Fideos spaghetti 250 g - Campo Fresco,4.6,5.5,10,Proveedor 02
+SKU0159,Cuidado Personal,Shampoo 750 ml - Brisa Andina,3.38,4.0,12,Proveedor 05
+SKU0160,Bebidas,Té helado 500 ml - Valle Dorado,12.09,15.2,4,Proveedor 02
+SKU0161,Bebidas,Bebida rehidratante 1 L - Valle Dorado,3.07,3.6,7,Proveedor 03
+SKU0162,Abarrotes,Mermelada de fresa 250 g - Tierra Fértil,2.83,3.2,10,Proveedor 01
+SKU0163,Bebidas,Agua con gas 1 L - Casa Limpia,3.78,5.1,3,Proveedor 11
+SKU0164,Abarrotes,Fideos spaghetti 250 g - Costa Verde,7.28,9.0,6,Proveedor 09
+SKU0165,Bebidas,Gaseosa lima-limón 1.5 L - Casa Limpia,5.23,7.0,4,Proveedor 03
+SKU0166,Limpieza,Esponja de cocina 2 und - Valle Dorado,6.33,7.8,11,Proveedor 01
+SKU0167,Lácteos y Refrigerados,Postre de gelatina 6 und - Pampa Real,4.04,4.9,4,Proveedor 09
+SKU0168,Limpieza,Servilletas 200 und - Valle Dorado,5.35,6.4,9,Proveedor 11
+SKU0169,Limpieza,Bolsas de basura 30 und - Mar Azul,2.37,2.7,6,Proveedor 03
+SKU0170,Cuidado Personal,Toallas higiénicas 16 und - Mar Azul,6.53,8.7,6,Proveedor 02
+SKU0171,Cuidado Personal,Desodorante 50 ml - Brisa Andina,22.54,29.6,6,Proveedor 09
+SKU0172,Limpieza,Esponja de cocina 2 und - Casa Limpia,17.65,22.4,9,Proveedor 01
+SKU0173,Lácteos y Refrigerados,Hot dog 6 und - Nevado,6.98,8.3,2,Proveedor 09
+SKU0174,Abarrotes,Aceite vegetal 5 L - Tierra Fértil,13.78,17.9,9,Proveedor 12
+SKU0175,Abarrotes,Avena en hojuelas 500 g - Valle Dorado,12.63,16.0,7,Proveedor 02
+SKU0176,Limpieza,Lejía 4 L - Tierra Fértil,13.44,15.7,9,Proveedor 05
+SKU0177,Lácteos y Refrigerados,Mantequilla 200 g - Mar Azul,4.8,5.5,3,Proveedor 06
+SKU0178,Cuidado Personal,Shampoo 750 ml - Campo Fresco,5.41,6.7,7,Proveedor 01
+SKU0179,Limpieza,Suavizante de ropa 2 L - Sol Naciente,16.01,19.2,5,Proveedor 02
+SKU0180,Abarrotes,Lentejas 500 g - Costa Verde,9.52,11.4,9,Proveedor 03
+SKU0181,Lácteos y Refrigerados,Mantequilla 200 g - Valle Dorado,2.92,3.4,3,Proveedor 12
+SKU0182,Abarrotes,Azúcar rubia 1 kg - Brisa Andina,7.21,9.1,6,Proveedor 12
+SKU0183,Limpieza,Lavavajilla 500 g - Pampa Real,5.13,6.2,11,Proveedor 06
+SKU0184,Bebidas,Cerveza rubia 650 ml - Tierra Fértil,10.62,12.1,6,Proveedor 11
+SKU0185,Lácteos y Refrigerados,Mantequilla 200 g - Tierra Fértil,16.68,21.5,3,Proveedor 02
+SKU0186,Bebidas,Jugo de frutas 1 L - Tierra Fértil,5.54,7.1,6,Proveedor 07
+SKU0187,Lácteos y Refrigerados,Jamón de pavo 100 g - Costa Verde,6.08,6.9,3,Proveedor 05
+SKU0188,Cuidado Personal,Shampoo 750 ml - Mar Azul,5.73,7.6,6,Proveedor 09
+SKU0189,Bebidas,Cerveza rubia 650 ml - Brisa Andina,5.43,6.5,4,Proveedor 01
+SKU0190,Abarrotes,Fideos tallarín 500 g - Pampa Real,12.41,14.8,5,Proveedor 06
+SKU0191,Limpieza,Papel higiénico 24 rollos - Casa Limpia,6.35,8.0,10,Proveedor 11
+SKU0192,Lácteos y Refrigerados,Crema de leche 200 g - Valle Dorado,4.32,5.2,3,Proveedor 05
+SKU0193,Cuidado Personal,Acondicionador 200 ml - Sol Naciente,5.96,7.5,6,Proveedor 02
+SKU0194,Lácteos y Refrigerados,Postre de gelatina 6 und - Nevado,5.88,7.5,2,Proveedor 10
+SKU0195,Lácteos y Refrigerados,Postre de gelatina 6 und - Mar Azul,8.77,10.9,4,Proveedor 07
+SKU0196,Abarrotes,Arroz extra 5 kg - Tierra Fértil,7.41,9.2,10,Proveedor 09
+SKU0197,Lácteos y Refrigerados,Postre de gelatina 120 g - Costa Verde,7.4,9.8,4,Proveedor 11
+SKU0198,Bebidas,Gaseosa lima-limón 1.5 L - Nevado,1.76,2.1,7,Proveedor 11
+SKU0199,Bebidas,Cerveza rubia 355 ml - Campo Fresco,7.81,9.8,4,Proveedor 08
+SKU0200,Abarrotes,Leche evaporada 170 g - Campo Fresco,8.14,10.7,10,Proveedor 11
+SKU0201,Lácteos y Refrigerados,Mantequilla 100 g - Mar Azul,3.77,4.7,2,Proveedor 07
+SKU0202,Abarrotes,Aceite vegetal 1 L - Tierra Fértil,5.18,6.0,4,Proveedor 10
+SKU0203,Cuidado Personal,Shampoo 400 ml - Brisa Andina,3.48,4.6,11,Proveedor 12
+SKU0204,Limpieza,Detergente en polvo 800 g - Valle Dorado,13.09,15.8,12,Proveedor 03
+SKU0205,Cuidado Personal,Jabón de tocador 3 und - Casa Limpia,8.35,9.6,5,Proveedor 02
+SKU0206,Abarrotes,Galletas de soda 6 und - Pampa Real,6.93,7.9,6,Proveedor 02
+SKU0207,Abarrotes,Lentejas 1 kg - Costa Verde,2.76,3.7,9,Proveedor 01
+SKU0208,Cuidado Personal,Jabón de tocador 90 g - Campo Fresco,7.48,8.7,12,Proveedor 04
+SKU0209,Abarrotes,Harina preparada 1 kg - Costa Verde,7.35,8.9,4,Proveedor 12
+SKU0210,Lácteos y Refrigerados,Hot dog 12 und - Mar Azul,7.06,8.1,2,Proveedor 10
+SKU0211,Bebidas,Cerveza rubia 355 ml - Mar Azul,4.1,5.1,7,Proveedor 06
+SKU0212,Cuidado Personal,Afeitadora desechable 4 und - Mar Azul,8.89,11.4,10,Proveedor 05
+SKU0213,Lácteos y Refrigerados,Hot dog 12 und - Brisa Andina,14.22,16.8,3,Proveedor 04
+SKU0214,Abarrotes,Salsa de tomate 400 g - Casa Limpia,4.19,4.9,5,Proveedor 07
+SKU0215,Limpieza,Desinfectante 650 ml - Nevado,8.6,9.9,5,Proveedor 06
+SKU0216,Abarrotes,Frijol canario 500 g - Pampa Real,12.46,16.0,6,Proveedor 11
+SKU0217,Abarrotes,Fideos tallarín 500 g - Campo Fresco,2.54,3.0,4,Proveedor 03
+SKU0218,Limpieza,Limpiatodo 900 ml - Sol Naciente,22.25,25.3,9,Proveedor 08
+SKU0219,Abarrotes,Mermelada de fresa 250 g - Brisa Andina,6.71,8.3,10,Proveedor 02
+SKU0220,Bebidas,Té helado 1.5 L - Mar Azul,5.07,5.7,3,Proveedor 10
+SKU0221,Abarrotes,Avena en hojuelas 500 g - Casa Limpia,4.33,5.6,9,Proveedor 01
+SKU0222,Limpieza,Limpiatodo 900 ml - Pampa Real,1.76,2.3,11,Proveedor 11
+SKU0223,Bebidas,Cerveza rubia 650 ml - Campo Fresco,2.04,2.6,5,Proveedor 11
+SKU0224,Abarrotes,Lentejas 500 g - Pampa Real,6.1,7.0,9,Proveedor 07
+SKU0225,Bebidas,Té helado 1.5 L - Tierra Fértil,6.4,8.1,4,Proveedor 03
+SKU0226,Bebidas,Agua con gas 625 ml - Tierra Fértil,8.41,11.0,3,Proveedor 04
+SKU0227,Bebidas,Cerveza rubia 650 ml - Costa Verde,4.66,5.8,7,Proveedor 02
+SKU0228,Cuidado Personal,Toallas higiénicas 8 und - Brisa Andina,7.46,8.7,11,Proveedor 07
+SKU0229,Limpieza,Papel higiénico 12 rollos - Pampa Real,28.75,35.3,8,Proveedor 11
+SKU0230,Lácteos y Refrigerados,Queso edam 200 g - Nevado,6.28,7.2,2,Proveedor 02
+SKU0231,Cuidado Personal,Toallas higiénicas 16 und - Tierra Fértil,10.54,13.0,5,Proveedor 07
+SKU0232,Lácteos y Refrigerados,Postre de gelatina 120 g - Valle Dorado,14.34,17.1,4,Proveedor 03
+SKU0233,Limpieza,Esponja de cocina 4 und - Tierra Fértil,10.83,12.6,6,Proveedor 03
+SKU0234,Bebidas,Bebida rehidratante 500 ml - Casa Limpia,2.4,2.9,7,Proveedor 09
+SKU0235,Cuidado Personal,Crema corporal 400 ml - Pampa Real,16.1,18.7,10,Proveedor 05
+SKU0236,Abarrotes,Frijol canario 1 kg - Sol Naciente,3.75,4.9,8,Proveedor 06
+SKU0237,Cuidado Personal,Afeitadora desechable 4 und - Brisa Andina,7.84,9.9,12,Proveedor 03
+SKU0238,Cuidado Personal,Afeitadora desechable 2 und - Pampa Real,11.77,14.5,9,Proveedor 12
+SKU0239,Abarrotes,Avena en hojuelas 500 g - Tierra Fértil,15.53,18.5,5,Proveedor 12
+SKU0240,Limpieza,Limpiatodo 1.8 L - Mar Azul,13.78,17.0,5,Proveedor 09
+SKU0241,Cuidado Personal,Jabón de tocador 3 und - Brisa Andina,10.5,13.3,9,Proveedor 05
+SKU0242,Bebidas,Bebida rehidratante 500 ml - Pampa Real,9.87,12.7,5,Proveedor 01
+SKU0243,Lácteos y Refrigerados,Postre de gelatina 120 g - Brisa Andina,3.21,3.8,4,Proveedor 06
+SKU0244,Abarrotes,Lentejas 1 kg - Valle Dorado,3.84,4.8,5,Proveedor 11
+SKU0245,Cuidado Personal,Desodorante 150 ml - Sol Naciente,10.22,13.4,9,Proveedor 05
+SKU0246,Bebidas,Agua sin gas 625 ml - Sol Naciente,2.37,2.9,7,Proveedor 09
+SKU0247,Cuidado Personal,Acondicionador 200 ml - Campo Fresco,7.34,9.4,6,Proveedor 03
+SKU0248,Abarrotes,Mermelada de fresa 250 g - Mar Azul,5.01,6.0,6,Proveedor 03
+SKU0249,Abarrotes,Lentejas 1 kg - Nevado,15.87,20.6,8,Proveedor 04
+SKU0250,Abarrotes,Aceite vegetal 1 L - Valle Dorado,8.07,10.8,7,Proveedor 07
+SKU0251,Abarrotes,Salsa de tomate 400 g - Brisa Andina,3.15,4.0,4,Proveedor 05
+SKU0252,Bebidas,Jugo de frutas 1 L - Mar Azul,25.85,32.4,4,Proveedor 05
+SKU0253,Cuidado Personal,Cepillo dental 2 und - Campo Fresco,6.61,7.9,5,Proveedor 04
+SKU0254,Abarrotes,Fideos spaghetti 500 g - Sol Naciente,3.48,4.3,10,Proveedor 10
+SKU0255,Abarrotes,Mayonesa 400 g - Campo Fresco,4.15,5.2,8,Proveedor 03
+SKU0256,Lácteos y Refrigerados,Postre de gelatina 6 und - Valle Dorado,9.52,12.4,4,Proveedor 12
+SKU0257,Abarrotes,Fideos spaghetti 500 g - Mar Azul,10.4,12.7,5,Proveedor 09
+SKU0258,Lácteos y Refrigerados,Yogurt natural 500 g - Nevado,9.83,11.2,2,Proveedor 10
+SKU0259,Cuidado Personal,Pasta dental 100 ml - Nevado,5.35,6.3,8,Proveedor 03
+SKU0260,Limpieza,Suavizante de ropa 2 L - Costa Verde,7.89,10.3,7,Proveedor 07
+SKU0261,Abarrotes,Frijol canario 500 g - Casa Limpia,8.55,9.8,4,Proveedor 04
+SKU0262,Limpieza,Papel higiénico 12 rollos - Campo Fresco,7.31,8.8,6,Proveedor 05
+SKU0263,Abarrotes,Sillao 500 ml - Casa Limpia,5.53,6.4,6,Proveedor 12
+SKU0264,Cuidado Personal,Desodorante 150 ml - Valle Dorado,4.64,5.7,6,Proveedor 09
+SKU0265,Lácteos y Refrigerados,Postre de gelatina 120 g - Casa Limpia,13.86,17.0,4,Proveedor 03
+SKU0266,Abarrotes,Atún en conserva 140 g - Brisa Andina,6.61,7.6,7,Proveedor 09
+SKU0267,Cuidado Personal,Shampoo 400 ml - Pampa Real,14.25,18.7,6,Proveedor 03
+SKU0268,Cuidado Personal,Desodorante 50 ml - Campo Fresco,6.51,8.1,12,Proveedor 10
+SKU0269,Abarrotes,Leche evaporada 170 g - Nevado,4.34,4.9,7,Proveedor 08
+SKU0270,Abarrotes,Leche evaporada 170 g - Costa Verde,4.7,5.4,7,Proveedor 11
+SKU0271,Lácteos y Refrigerados,Mantequilla 200 g - Campo Fresco,2.21,2.9,2,Proveedor 07
+SKU0272,Lácteos y Refrigerados,Yogurt de fruta 120 g - Casa Limpia,15.57,20.4,3,Proveedor 04
+SKU0273,Lácteos y Refrigerados,Queso edam 200 g - Mar Azul,15.41,17.5,4,Proveedor 12
+SKU0274,Abarrotes,Mayonesa 400 g - Valle Dorado,14.59,18.4,9,Proveedor 02
+SKU0275,Abarrotes,Sal de mesa 500 g - Sol Naciente,7.42,8.4,7,Proveedor 01
+SKU0276,Limpieza,Suavizante de ropa 2 L - Casa Limpia,5.81,7.3,7,Proveedor 11
+SKU0277,Limpieza,Limpiatodo 1.8 L - Brisa Andina,18.42,24.4,6,Proveedor 04
+SKU0278,Abarrotes,Avena en hojuelas 300 g - Nevado,8.67,10.0,7,Proveedor 06
+SKU0279,Limpieza,Bolsas de basura 10 und - Costa Verde,35.53,45.0,7,Proveedor 06
+SKU0280,Limpieza,Servilletas 100 und - Costa Verde,7.35,9.6,11,Proveedor 02
+SKU0281,Limpieza,Suavizante de ropa 900 ml - Nevado,4.8,5.5,9,Proveedor 06
+SKU0282,Cuidado Personal,Toallas higiénicas 8 und - Nevado,7.03,8.9,7,Proveedor 11
+SKU0283,Abarrotes,Chocolate de taza 180 g - Pampa Real,2.54,3.1,8,Proveedor 12
+SKU0284,Lácteos y Refrigerados,Jamón de pavo 250 g - Campo Fresco,5.21,6.9,2,Proveedor 04
+SKU0285,Abarrotes,Chocolate de taza 180 g - Valle Dorado,5.49,6.9,5,Proveedor 12
+SKU0286,Bebidas,Jugo de frutas 300 ml - Pampa Real,5.25,6.5,3,Proveedor 12
+SKU0287,Lácteos y Refrigerados,Yogurt natural 500 g - Tierra Fértil,7.47,9.4,2,Proveedor 05
+SKU0288,Cuidado Personal,Shampoo 400 ml - Tierra Fértil,9.24,10.5,8,Proveedor 12
+SKU0289,Abarrotes,Aceite vegetal 5 L - Pampa Real,6.69,7.8,5,Proveedor 01
+SKU0290,Bebidas,Bebida rehidratante 500 ml - Tierra Fértil,2.79,3.5,7,Proveedor 05
+SKU0291,Bebidas,Té helado 1.5 L - Costa Verde,6.61,8.9,6,Proveedor 04
+SKU0292,Limpieza,Servilletas 200 und - Sol Naciente,7.51,9.9,11,Proveedor 08
+SKU0293,Abarrotes,Mermelada de fresa 500 g - Tierra Fértil,4.59,5.4,4,Proveedor 03
+SKU0294,Limpieza,Desinfectante 650 ml - Valle Dorado,5.37,7.2,11,Proveedor 05
+SKU0295,Lácteos y Refrigerados,Queso fresco 250 g - Costa Verde,6.67,8.6,4,Proveedor 09
+SKU0296,Bebidas,Chicha morada 500 ml - Mar Azul,6.12,7.4,4,Proveedor 05
+SKU0297,Abarrotes,Fideos spaghetti 250 g - Brisa Andina,5.27,6.7,7,Proveedor 03
+SKU0298,Bebidas,Cerveza rubia 355 ml - Pampa Real,5.17,6.3,7,Proveedor 02
+SKU0299,Cuidado Personal,Cepillo dental 2 und - Pampa Real,5.28,6.2,8,Proveedor 08
+SKU0300,Limpieza,Bolsas de basura 10 und - Tierra Fértil,6.59,8.1,6,Proveedor 10
+SKU0301,Abarrotes,Azúcar rubia 1 kg - Campo Fresco,5.4,6.8,8,Proveedor 08
+SKU0302,Bebidas,Gaseosa lima-limón 1.5 L - Campo Fresco,3.56,4.4,7,Proveedor 06
+SKU0303,Limpieza,Limpiatodo 900 ml - Tierra Fértil,11.47,13.3,10,Proveedor 12
+SKU0304,Abarrotes,Aceite vegetal 2 L - Campo Fresco,4.03,4.9,4,Proveedor 04
+SKU0305,Limpieza,Desinfectante 1.8 L - Casa Limpia,6.45,7.4,7,Proveedor 09
+SKU0306,Cuidado Personal,Shampoo 200 ml - Campo Fresco,16.05,21.6,7,Proveedor 06
+SKU0307,Limpieza,Papel higiénico 4 rollos - Tierra Fértil,20.44,24.3,7,Proveedor 07
+SKU0308,Limpieza,Lavavajilla 500 g - Casa Limpia,4.83,6.4,11,Proveedor 08
+SKU0309,Abarrotes,Azúcar rubia 1 kg - Tierra Fértil,7.64,10.2,7,Proveedor 09
+SKU0310,Abarrotes,Chocolate de taza 180 g - Casa Limpia,6.31,8.4,9,Proveedor 11
+SKU0311,Abarrotes,Mermelada de fresa 500 g - Sol Naciente,4.02,5.2,4,Proveedor 06
+SKU0312,Bebidas,Gaseosa cola 3 L - Tierra Fértil,5.24,5.9,7,Proveedor 03
+SKU0313,Cuidado Personal,Crema corporal 400 ml - Brisa Andina,14.47,19.1,7,Proveedor 11
+SKU0314,Abarrotes,Sillao 150 ml - Costa Verde,3.77,4.7,7,Proveedor 06
+SKU0315,Cuidado Personal,Cepillo dental 1 und - Casa Limpia,10.84,14.6,5,Proveedor 03
+SKU0316,Limpieza,Detergente en polvo 800 g - Costa Verde,4.22,5.0,5,Proveedor 06
+SKU0317,Limpieza,Esponja de cocina 4 und - Brisa Andina,3.73,4.9,9,Proveedor 08
+SKU0318,Abarrotes,Sal de mesa 500 g - Nevado,10.0,11.4,8,Proveedor 10
+SKU0319,Bebidas,Gaseosa lima-limón 500 ml - Tierra Fértil,2.45,2.9,5,Proveedor 01
+SKU0320,Lácteos y Refrigerados,Queso fresco 500 g - Tierra Fértil,5.67,6.6,2,Proveedor 01
+SKU0321,Abarrotes,Lentejas 500 g - Valle Dorado,5.78,7.7,10,Proveedor 03
+SKU0322,Bebidas,Jugo de frutas 1 L - Nevado,2.93,3.4,5,Proveedor 01
+SKU0323,Cuidado Personal,Crema corporal 400 ml - Valle Dorado,10.98,13.8,7,Proveedor 10
+SKU0324,Cuidado Personal,Crema corporal 400 ml - Nevado,7.13,8.9,9,Proveedor 07
+SKU0325,Abarrotes,Aceite vegetal 5 L - Brisa Andina,4.83,6.0,9,Proveedor 06
+SKU0326,Cuidado Personal,Acondicionador 200 ml - Costa Verde,28.48,34.8,9,Proveedor 01
+SKU0327,Cuidado Personal,Afeitadora desechable 4 und - Sol Naciente,3.76,4.9,7,Proveedor 09
+SKU0328,Cuidado Personal,Afeitadora desechable 4 und - Pampa Real,6.04,7.8,6,Proveedor 10
+SKU0329,Cuidado Personal,Afeitadora desechable 2 und - Costa Verde,5.57,7.2,10,Proveedor 07
+SKU0330,Bebidas,Agua con gas 625 ml - Brisa Andina,7.01,8.0,6,Proveedor 08
+SKU0331,Abarrotes,Salsa de tomate 400 g - Mar Azul,5.46,7.1,7,Proveedor 03
+SKU0332,Abarrotes,Sillao 500 ml - Valle Dorado,6.37,7.8,8,Proveedor 09
+SKU0333,Lácteos y Refrigerados,Yogurt natural 1 L - Pampa Real,9.91,11.1,4,Proveedor 01
+SKU0334,Abarrotes,Sal de mesa 1 kg - Sol Naciente,3.76,4.6,6,Proveedor 01
+SKU0335,Limpieza,Desinfectante 1.8 L - Sol Naciente,5.55,6.3,10,Proveedor 08
+SKU0336,Bebidas,Gaseosa cola 3 L - Nevado,12.09,14.0,7,Proveedor 10
+SKU0337,Abarrotes,Lentejas 1 kg - Campo Fresco,15.66,19.9,7,Proveedor 03
+SKU0338,Abarrotes,Sal de mesa 1 kg - Nevado,8.03,9.4,10,Proveedor 06
+SKU0339,Cuidado Personal,Pañales 60 und - Valle Dorado,27.04,32.5,7,Proveedor 09
+SKU0340,Cuidado Personal,Afeitadora desechable 2 und - Tierra Fértil,5.57,6.9,9,Proveedor 07
+SKU0341,Bebidas,Chicha morada 1 L - Valle Dorado,2.2,2.5,7,Proveedor 01
+SKU0342,Lácteos y Refrigerados,Hot dog 12 und - Tierra Fértil,7.44,9.2,4,Proveedor 08
+SKU0343,Bebidas,Néctar de durazno 300 ml - Sol Naciente,3.31,3.8,3,Proveedor 04
+SKU0344,Abarrotes,Quinua 250 g - Costa Verde,6.93,9.2,9,Proveedor 09
+SKU0345,Limpieza,Esponja de cocina 2 und - Mar Azul,7.02,8.4,12,Proveedor 07
+SKU0346,Cuidado Personal,Shampoo 750 ml - Sol Naciente,8.16,9.4,12,Proveedor 11
+SKU0347,Abarrotes,Lentejas 500 g - Sol Naciente,17.41,20.4,6,Proveedor 02
+SKU0348,Abarrotes,Salsa de tomate 400 g - Valle Dorado,4.93,6.3,5,Proveedor 07
+SKU0349,Cuidado Personal,Jabón de tocador 3 und - Tierra Fértil,4.17,4.8,12,Proveedor 06
+SKU0350,Cuidado Personal,Acondicionador 200 ml - Pampa Real,8.54,9.8,12,Proveedor 05
+SKU0351,Lácteos y Refrigerados,Leche fresca 1 L - Campo Fresco,4.89,5.8,2,Proveedor 05
+SKU0352,Limpieza,Servilletas 100 und - Tierra Fértil,1.57,1.9,9,Proveedor 06
+SKU0353,Abarrotes,Mermelada de fresa 500 g - Mar Azul,3.28,4.3,5,Proveedor 12
+SKU0354,Lácteos y Refrigerados,Jamón de pavo 250 g - Brisa Andina,11.4,13.3,2,Proveedor 10
+SKU0355,Cuidado Personal,Shampoo 200 ml - Nevado,7.74,9.1,9,Proveedor 10
+SKU0356,Bebidas,Chicha morada 1 L - Brisa Andina,8.51,11.2,6,Proveedor 05
+SKU0357,Bebidas,Agua con gas 1 L - Valle Dorado,6.02,7.1,4,Proveedor 03
+SKU0358,Bebidas,Gaseosa lima-limón 1.5 L - Sol Naciente,2.74,3.2,4,Proveedor 11
+SKU0359,Bebidas,Gaseosa cola 1.5 L - Campo Fresco,4.47,5.1,5,Proveedor 11
+SKU0360,Lácteos y Refrigerados,Yogurt de fruta 120 g - Mar Azul,1.95,2.3,3,Proveedor 08
+SKU0361,Lácteos y Refrigerados,Yogurt natural 1 L - Tierra Fértil,5.73,7.2,4,Proveedor 09
+SKU0362,Bebidas,Chicha morada 500 ml - Tierra Fértil,6.11,7.2,7,Proveedor 09
+SKU0363,Cuidado Personal,Desodorante 50 ml - Sol Naciente,8.01,10.7,6,Proveedor 07
+SKU0364,Bebidas,Gaseosa cola 3 L - Pampa Real,6.95,7.9,5,Proveedor 08
+SKU0365,Limpieza,Bolsas de basura 10 und - Pampa Real,9.59,11.8,7,Proveedor 05
+SKU0366,Bebidas,Agua sin gas 7 L - Costa Verde,2.49,2.9,6,Proveedor 05
+SKU0367,Bebidas,Cerveza rubia 650 ml - Nevado,2.8,3.3,7,Proveedor 05
+SKU0368,Cuidado Personal,Jabón de tocador 90 g - Casa Limpia,10.39,13.3,9,Proveedor 08
+SKU0369,Cuidado Personal,Afeitadora desechable 2 und - Valle Dorado,5.69,7.0,9,Proveedor 10
+SKU0370,Abarrotes,Harina preparada 500 g - Sol Naciente,2.68,3.2,10,Proveedor 04
+SKU0371,Abarrotes,Sillao 150 ml - Sol Naciente,3.01,3.7,9,Proveedor 04
+SKU0372,Lácteos y Refrigerados,Leche fresca 1 L - Valle Dorado,5.24,6.9,2,Proveedor 12
+SKU0373,Bebidas,Agua con gas 1 L - Tierra Fértil,3.38,4.4,4,Proveedor 08
+SKU0374,Abarrotes,Galletas de soda 12 und - Casa Limpia,2.81,3.2,10,Proveedor 01
+SKU0375,Lácteos y Refrigerados,Queso fresco 500 g - Pampa Real,7.01,9.4,3,Proveedor 12
+SKU0376,Cuidado Personal,Desodorante 150 ml - Brisa Andina,13.48,15.4,11,Proveedor 11
+SKU0377,Cuidado Personal,Acondicionador 400 ml - Valle Dorado,7.07,8.0,10,Proveedor 10
+SKU0378,Limpieza,Papel higiénico 4 rollos - Sol Naciente,27.26,33.3,9,Proveedor 12
+SKU0379,Bebidas,Agua con gas 1 L - Nevado,4.65,5.3,4,Proveedor 02
+SKU0380,Limpieza,Detergente en polvo 800 g - Tierra Fértil,25.34,34.0,11,Proveedor 02
+SKU0381,Bebidas,Jugo de frutas 300 ml - Casa Limpia,5.16,6.8,5,Proveedor 07
+SKU0382,Lácteos y Refrigerados,Leche fresca 946 ml - Campo Fresco,4.73,5.4,4,Proveedor 10
+SKU0383,Bebidas,Agua sin gas 625 ml - Pampa Real,7.67,10.2,5,Proveedor 06
+SKU0384,Lácteos y Refrigerados,Queso edam 400 g - Nevado,7.6,9.0,3,Proveedor 02
+SKU0385,Abarrotes,Frijol canario 500 g - Nevado,15.56,18.6,10,Proveedor 06
+SKU0386,Bebidas,Té helado 500 ml - Brisa Andina,2.97,3.9,5,Proveedor 02
+SKU0387,Bebidas,Agua sin gas 7 L - Casa Limpia,11.65,13.9,3,Proveedor 11
+SKU0388,Cuidado Personal,Pasta dental 75 ml - Casa Limpia,21.75,28.4,8,Proveedor 08
+SKU0389,Abarrotes,Café molido 200 g - Casa Limpia,9.39,11.2,9,Proveedor 09
+SKU0390,Lácteos y Refrigerados,Queso fresco 500 g - Costa Verde,5.14,6.3,2,Proveedor 12
+SKU0391,Limpieza,Servilletas 200 und - Costa Verde,5.94,6.9,11,Proveedor 03
+SKU0392,Lácteos y Refrigerados,Yogurt de fruta 1 L - Campo Fresco,5.58,6.3,4,Proveedor 12
+SKU0393,Limpieza,Esponja de cocina 2 und - Sol Naciente,9.11,11.3,12,Proveedor 06
+SKU0394,Limpieza,Limpiatodo 900 ml - Casa Limpia,8.98,12.0,7,Proveedor 06
+SKU0395,Limpieza,Suavizante de ropa 900 ml - Brisa Andina,6.73,8.9,9,Proveedor 12
+SKU0396,Abarrotes,Leche evaporada 170 g - Casa Limpia,4.99,6.7,8,Proveedor 09
+SKU0397,Abarrotes,Sal de mesa 1 kg - Brisa Andina,7.02,8.4,10,Proveedor 01
+SKU0398,Lácteos y Refrigerados,Crema de leche 500 g - Brisa Andina,7.83,10.0,4,Proveedor 07
+SKU0399,Bebidas,Gaseosa lima-limón 1.5 L - Pampa Real,3.77,5.1,7,Proveedor 10
+SKU0400,Limpieza,Detergente en polvo 800 g - Pampa Real,11.45,14.5,11,Proveedor 03
+SKU0401,Limpieza,Lejía 1 L - Tierra Fértil,12.62,16.6,7,Proveedor 12
+SKU0402,Lácteos y Refrigerados,Yogurt natural 1 L - Campo Fresco,7.4,8.9,3,Proveedor 10
+SKU0403,Cuidado Personal,Pasta dental 100 ml - Tierra Fértil,5.41,6.1,11,Proveedor 12
+SKU0404,Abarrotes,Mermelada de fresa 250 g - Campo Fresco,6.53,8.6,7,Proveedor 11
+SKU0405,Abarrotes,Frijol canario 500 g - Campo Fresco,1.99,2.5,8,Proveedor 01
+SKU0406,Abarrotes,Quinua 250 g - Brisa Andina,10.04,13.0,5,Proveedor 11
+SKU0407,Abarrotes,Salsa de tomate 200 g - Campo Fresco,10.77,13.1,9,Proveedor 07
+SKU0408,Lácteos y Refrigerados,Queso fresco 250 g - Tierra Fértil,18.54,21.5,3,Proveedor 01
+SKU0409,Abarrotes,Sillao 500 ml - Mar Azul,11.33,14.2,5,Proveedor 06
+SKU0410,Limpieza,Limpiatodo 900 ml - Brisa Andina,9.92,11.8,6,Proveedor 08
+SKU0411,Abarrotes,Avena en hojuelas 300 g - Sol Naciente,4.63,6.1,10,Proveedor 01
+SKU0412,Limpieza,Suavizante de ropa 2 L - Campo Fresco,4.25,5.6,6,Proveedor 06
+SKU0413,Cuidado Personal,Pasta dental 100 ml - Brisa Andina,4.96,5.8,9,Proveedor 02
+SKU0414,Limpieza,Servilletas 100 und - Pampa Real,10.12,11.4,6,Proveedor 07
+SKU0415,Cuidado Personal,Shampoo 200 ml - Costa Verde,14.6,17.9,12,Proveedor 12
+SKU0416,Abarrotes,Chocolate de taza 90 g - Costa Verde,5.55,7.3,7,Proveedor 01
+SKU0417,Bebidas,Té helado 1.5 L - Pampa Real,1.55,2.1,6,Proveedor 03
+SKU0418,Lácteos y Refrigerados,Queso fresco 500 g - Campo Fresco,4.14,5.2,4,Proveedor 09
+SKU0419,Lácteos y Refrigerados,Queso fresco 500 g - Nevado,6.03,7.4,4,Proveedor 03
+SKU0420,Lácteos y Refrigerados,Yogurt de fruta 120 g - Sol Naciente,8.88,10.5,2,Proveedor 06
+SKU0421,Bebidas,Té helado 1.5 L - Valle Dorado,8.01,10.3,5,Proveedor 03
+SKU0422,Bebidas,Agua sin gas 2.5 L - Mar Azul,12.83,15.5,7,Proveedor 09
+SKU0423,Limpieza,Esponja de cocina 2 und - Pampa Real,15.7,19.3,8,Proveedor 06
+SKU0424,Limpieza,Servilletas 200 und - Nevado,5.86,6.9,7,Proveedor 05
+SKU0425,Limpieza,Suavizante de ropa 900 ml - Costa Verde,16.04,18.7,6,Proveedor 03
+SKU0426,Bebidas,Agua sin gas 625 ml - Tierra Fértil,1.62,1.8,4,Proveedor 11
+SKU0427,Limpieza,Lejía 1 L - Valle Dorado,12.23,16.0,12,Proveedor 04
+SKU0428,Bebidas,Jugo de frutas 300 ml - Nevado,7.6,10.2,6,Proveedor 02
+SKU0429,Lácteos y Refrigerados,Mantequilla 200 g - Sol Naciente,3.55,4.1,2,Proveedor 02
+SKU0430,Lácteos y Refrigerados,Queso edam 400 g - Costa Verde,1.99,2.4,3,Proveedor 10
+SKU0431,Abarrotes,Harina preparada 500 g - Mar Azul,6.92,8.5,9,Proveedor 12
+SKU0432,Cuidado Personal,Shampoo 750 ml - Costa Verde,4.9,6.1,11,Proveedor 01
+SKU0433,Bebidas,Agua con gas 625 ml - Valle Dorado,2.75,3.2,4,Proveedor 12
+SKU0434,Limpieza,Esponja de cocina 4 und - Casa Limpia,9.84,13.2,6,Proveedor 02
+SKU0435,Abarrotes,Lentejas 1 kg - Brisa Andina,7.79,10.3,8,Proveedor 06
+SKU0436,Abarrotes,Sal de mesa 1 kg - Mar Azul,3.44,4.1,9,Proveedor 09
+SKU0437,Cuidado Personal,Afeitadora desechable 2 und - Mar Azul,10.06,11.7,7,Proveedor 07
+SKU0438,Cuidado Personal,Acondicionador 200 ml - Tierra Fértil,10.81,14.0,10,Proveedor 12
+SKU0439,Cuidado Personal,Acondicionador 200 ml - Nevado,16.7,20.7,12,Proveedor 05
+SKU0440,Abarrotes,Harina preparada 1 kg - Tierra Fértil,11.28,13.9,7,Proveedor 01
+SKU0441,Limpieza,Limpiatodo 1.8 L - Casa Limpia,12.08,15.9,11,Proveedor 12
+SKU0442,Bebidas,Gaseosa lima-limón 1.5 L - Mar Azul,5.56,6.9,4,Proveedor 10
+SKU0443,Limpieza,Papel higiénico 24 rollos - Costa Verde,8.52,11.0,6,Proveedor 09
+SKU0444,Abarrotes,Arroz extra 1 kg - Brisa Andina,2.37,3.1,4,Proveedor 11
+SKU0445,Abarrotes,Sillao 500 ml - Campo Fresco,13.55,16.9,6,Proveedor 12
+SKU0446,Abarrotes,Atún en conserva 140 g - Valle Dorado,5.72,6.7,8,Proveedor 10
+SKU0447,Cuidado Personal,Afeitadora desechable 2 und - Brisa Andina,8.43,10.5,6,Proveedor 01
+SKU0448,Lácteos y Refrigerados,Leche fresca 946 ml - Sol Naciente,8.97,10.0,2,Proveedor 02
+SKU0449,Abarrotes,Quinua 250 g - Tierra Fértil,6.83,8.1,10,Proveedor 10
+SKU0450,Limpieza,Papel higiénico 24 rollos - Pampa Real,3.34,3.9,11,Proveedor 10
+SKU0451,Limpieza,Lejía 1 L - Sol Naciente,7.28,9.0,8,Proveedor 06
+SKU0452,Bebidas,Jugo de frutas 1 L - Valle Dorado,4.57,5.5,5,Proveedor 07
+SKU0453,Abarrotes,Chocolate de taza 90 g - Tierra Fértil,9.99,13.3,4,Proveedor 03
+SKU0454,Bebidas,Cerveza rubia 650 ml - Pampa Real,1.14,1.5,6,Proveedor 08
+SKU0455,Limpieza,Esponja de cocina 4 und - Pampa Real,8.82,11.7,6,Proveedor 12
+SKU0456,Cuidado Personal,Afeitadora desechable 4 und - Casa Limpia,28.8,32.7,5,Proveedor 01
+SKU0457,Lácteos y Refrigerados,Yogurt natural 1 L - Valle Dorado,3.39,4.2,3,Proveedor 08
+SKU0458,Abarrotes,Leche evaporada 400 g - Pampa Real,3.06,4.1,4,Proveedor 02
+SKU0459,Bebidas,Té helado 500 ml - Pampa Real,2.44,3.3,5,Proveedor 01
+SKU0460,Cuidado Personal,Desodorante 150 ml - Tierra Fértil,7.33,8.7,7,Proveedor 05
+SKU0461,Abarrotes,Sal de mesa 1 kg - Pampa Real,3.79,4.4,6,Proveedor 12
+SKU0462,Bebidas,Agua sin gas 7 L - Nevado,8.96,11.4,4,Proveedor 10
+SKU0463,Abarrotes,Mermelada de fresa 500 g - Nevado,4.03,4.6,10,Proveedor 06
+SKU0464,Bebidas,Agua sin gas 2.5 L - Costa Verde,5.34,6.5,3,Proveedor 09
+SKU0465,Abarrotes,Café molido 100 g - Nevado,9.82,12.4,6,Proveedor 09
+SKU0466,Lácteos y Refrigerados,Postre de gelatina 6 und - Costa Verde,2.45,2.9,3,Proveedor 04
+SKU0467,Lácteos y Refrigerados,Yogurt de fruta 120 g - Costa Verde,7.03,9.0,3,Proveedor 10
+SKU0468,Lácteos y Refrigerados,Crema de leche 500 g - Sol Naciente,5.74,7.1,2,Proveedor 04
+SKU0469,Abarrotes,Frijol canario 1 kg - Mar Azul,17.99,22.2,4,Proveedor 06
+SKU0470,Abarrotes,Quinua 500 g - Campo Fresco,9.47,11.9,4,Proveedor 12
+SKU0471,Cuidado Personal,Toallas higiénicas 8 und - Tierra Fértil,5.19,7.0,9,Proveedor 02
+SKU0472,Limpieza,Lavavajilla 900 g - Pampa Real,3.08,3.7,11,Proveedor 03
+SKU0473,Limpieza,Detergente en polvo 2 kg - Campo Fresco,7.49,9.7,6,Proveedor 05
+SKU0474,Limpieza,Desinfectante 650 ml - Tierra Fértil,9.65,11.6,10,Proveedor 11
+SKU0475,Abarrotes,Quinua 250 g - Valle Dorado,20.24,24.6,10,Proveedor 02
+SKU0476,Cuidado Personal,Pañales 60 und - Costa Verde,5.4,7.0,9,Proveedor 02
+SKU0477,Bebidas,Jugo de frutas 300 ml - Tierra Fértil,3.29,4.1,4,Proveedor 06
+SKU0478,Lácteos y Refrigerados,Yogurt natural 1 L - Sol Naciente,12.44,15.7,3,Proveedor 05
+SKU0479,Abarrotes,Leche evaporada 400 g - Costa Verde,3.25,3.7,8,Proveedor 04
+SKU0480,Limpieza,Papel higiénico 12 rollos - Brisa Andina,6.96,8.5,12,Proveedor 01
+SKU0481,Abarrotes,Arroz extra 5 kg - Mar Azul,8.65,11.4,4,Proveedor 10
+SKU0482,Limpieza,Detergente en polvo 2 kg - Brisa Andina,4.53,6.1,10,Proveedor 01
+SKU0483,Bebidas,Gaseosa cola 3 L - Valle Dorado,3.79,5.0,4,Proveedor 08
+SKU0484,Bebidas,Té helado 500 ml - Costa Verde,2.56,3.0,4,Proveedor 04
+SKU0485,Bebidas,Gaseosa cola 3 L - Brisa Andina,3.74,4.3,3,Proveedor 07
+SKU0486,Bebidas,Gaseosa cola 3 L - Campo Fresco,3.98,4.5,4,Proveedor 04
+SKU0487,Lácteos y Refrigerados,Hot dog 12 und - Campo Fresco,8.99,11.8,3,Proveedor 03
+SKU0488,Abarrotes,Galletas de soda 12 und - Brisa Andina,6.64,7.9,8,Proveedor 03
+SKU0489,Limpieza,Papel higiénico 12 rollos - Costa Verde,2.51,3.2,6,Proveedor 04
+SKU0490,Abarrotes,Harina preparada 500 g - Campo Fresco,10.92,14.3,9,Proveedor 06
+SKU0491,Abarrotes,Sillao 150 ml - Brisa Andina,4.79,5.8,9,Proveedor 11
+SKU0492,Limpieza,Bolsas de basura 10 und - Mar Azul,6.69,7.7,12,Proveedor 01
+SKU0493,Lácteos y Refrigerados,Leche fresca 946 ml - Casa Limpia,10.03,12.2,4,Proveedor 07
+SKU0494,Abarrotes,Galletas de soda 6 und - Sol Naciente,17.55,20.1,6,Proveedor 12
+SKU0495,Lácteos y Refrigerados,Yogurt de fruta 1 L - Sol Naciente,9.84,12.5,2,Proveedor 11
+SKU0496,Cuidado Personal,Jabón de tocador 90 g - Tierra Fértil,3.14,4.2,10,Proveedor 04
+SKU0497,Bebidas,Gaseosa cola 1.5 L - Sol Naciente,8.06,10.6,7,Proveedor 04
+SKU0498,Abarrotes,Frijol canario 500 g - Sol Naciente,5.57,6.4,5,Proveedor 07
+SKU0499,Cuidado Personal,Toallas higiénicas 8 und - Sol Naciente,7.26,8.9,5,Proveedor 02
+SKU0500,Limpieza,Bolsas de basura 30 und - Campo Fresco,9.54,12.7,5,Proveedor 03
