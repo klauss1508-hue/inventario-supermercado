@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tablero de reposición ABC</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: una góndola de lectura. Respuesta primero, luego 5 KPIs, luego el porqué (gráficos) y al final el detalle por SKU. */
+:root {
+  --bg: #f2f4f7;
+  --surface: #ffffff;
+  --ink: #121922;
+  --ink-2: #47515e;
+  --ink-3: #6f7a88;
+  --line: #dde2e9;
+  --track: #e9edf2;
+  --accent: #2a78d6;      /* dato principal */
+  --accent-soft: #2a78d61f;
+  --gap: #eb6834;         /* brecha, lo que falta */
+  --neutral-bar: #8b939e;
+  --crit: #c2362f; --crit-soft: #c2362f17;
+  --warn: #a8650a; --warn-soft: #e0a03024;
+  --ok: #1d7f4e;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1217; --surface: #161b22; --ink: #e8edf3; --ink-2: #b2bcc8; --ink-3: #8691a0;
+    --line: #29313c; --track: #212833; --accent: #3987e5; --accent-soft: #3987e529; --gap: #d95926;
+    --neutral-bar: #6e7782; --crit: #e66767; --crit-soft: #e6676721; --warn: #e0a030; --warn-soft: #e0a0301f;
+    --ok: #4cb782; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1217; --surface: #161b22; --ink: #e8edf3; --ink-2: #b2bcc8; --ink-3: #8691a0;
+  --line: #29313c; --track: #212833; --accent: #3987e5; --accent-soft: #3987e529; --gap: #d95926;
+  --neutral-bar: #6e7782; --crit: #e66767; --crit-soft: #e6676721; --warn: #e0a030; --warn-soft: #e0a0301f;
+  --ok: #4cb782; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 15px/1.5 var(--f-body);
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 1180px; margin: 0 auto;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 20px;
+}
+h1, h2, h3 { font-family: var(--f-display); font-stretch: 85%; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+.num { font-variant-numeric: tabular-nums; }
+.mono { font-family: var(--f-mono); font-size: 0.86em; }
+.eyebrow { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+
+/* Encabezado */
+header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 8px 24px; }
+header h1 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: 0.78rem; color: var(--ink-2); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; background: var(--surface); }
+.tag.sint { border-color: var(--warn); color: var(--warn); }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; min-width: 0; }
+.panel > header, .panel-head { margin-bottom: 14px; display: grid; gap: 4px; }
+.panel-head p { color: var(--ink-2); font-size: 0.92rem; max-width: 70ch; }
+
+/* Respuesta (hero) */
+.answer { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: center; padding: 26px; }
+.answer .q { color: var(--ink-2); max-width: 60ch; }
+.answer h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); font-weight: 800; line-height: 1.08; margin-top: 10px; }
+.answer h2 em { font-style: normal; color: var(--gap); }
+.answer .sub { color: var(--ink-2); margin-top: 10px; max-width: 60ch; }
+.ropcompare { display: grid; gap: 12px; }
+.roprow { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 10px; align-items: center; }
+.roprow .lbl { font-size: 0.85rem; color: var(--ink-2); line-height: 1.2; }
+.roprow .bar { height: 34px; border-radius: 0 6px 6px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px;
+  font: 700 1.05rem var(--f-display); font-stretch: 85%; color: #fff; }
+.roprow .bar.actual { background: var(--neutral-bar); }
+.roprow .bar.rec { background: var(--accent); }
+.ropnote { font-size: 0.85rem; color: var(--ink-2); }
+.ropnote b { color: var(--ink); }
+
+/* KPIs */
+.kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.kpi { display: grid; gap: 6px; align-content: start; padding: 16px; }
+.kpi .v { font: 800 2.1rem/1 var(--f-display); font-stretch: 80%; font-variant-numeric: tabular-nums; }
+.kpi .d { font-size: 0.86rem; color: var(--ink-2); line-height: 1.35; }
+.chip { justify-self: start; display: inline-flex; align-items: center; gap: 6px; font-size: 0.74rem; font-weight: 700;
+  border-radius: 999px; padding: 2px 9px 2px 4px; }
+.chip::before { content: "!"; display: grid; place-items: center; width: 15px; height: 15px; border-radius: 50%;
+  font-size: 0.68rem; color: var(--surface); }
+.chip.crit { color: var(--crit); background: var(--crit-soft); }
+.chip.crit::before { background: var(--crit); }
+.chip.warn { color: var(--warn); background: var(--warn-soft); }
+.chip.warn::before { background: var(--warn); }
+.chip.info { color: var(--ink-2); background: var(--track); padding-left: 9px; }
+.chip.info::before { display: none; }
+
+/* Rejillas */
+.grid-2 { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; }
+
+/* Pareto (SVG) */
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--ink-3); font: 500 12px var(--f-body); }
+.chart .ax { stroke: var(--line); }
+.chart .grid { stroke: var(--track); }
+.chart .ref { stroke: var(--ink-3); stroke-dasharray: 4 4; }
+.chart .line { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.chart .area { fill: var(--accent-soft); }
+.chart .dot { fill: var(--accent); stroke: var(--surface); stroke-width: 2; }
+.chart .band { font: 700 13px var(--f-display); fill: var(--ink-2); }
+.chart .lab { fill: var(--ink-2); font-size: 12.5px; }
+.chart .cross { stroke: var(--ink-3); stroke-width: 1; }
+
+/* Barras horizontales en HTML */
+.hbars { display: grid; gap: 10px; }
+.hbar { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr) 3.6rem; gap: 10px; align-items: center; border-radius: 6px; }
+.hbar .lbl { font-size: 0.9rem; line-height: 1.2; }
+.hbar .val { font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+.track { position: relative; height: 22px; background: var(--track); border-radius: 0 5px 5px 0; }
+.fill { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 0 5px 5px 0; background: var(--accent); }
+.target { position: absolute; top: -5px; bottom: -5px; width: 0; border-left: 2px dashed var(--ink); }
+.target-lbl { font-size: 0.8rem; color: var(--ink-2); margin: 2px 0 0; text-align: right; padding-right: 3.6rem; }
+.hbar:hover .fill, .hbar:focus-visible .fill { filter: brightness(1.12); }
+.hbar:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Puente del ROP */
+.bridge .hbar { grid-template-columns: 11rem minmax(0, 1fr) 4.4rem; }
+.bridge .fill.base { background: var(--neutral-bar); }
+.bridge .fill.step { background: var(--gap); border-radius: 0; }
+.bridge .fill.final { background: var(--accent); }
+.bridge .hbar.total .lbl, .bridge .hbar.total .val { font-weight: 700; }
+.bridge .val.plus { color: var(--gap); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--ink-2); margin-top: 12px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+/* Tablas */
+.tscroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+th { font-size: 0.74rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; }
+th:first-child, td:first-child, .l { text-align: left; }
+td.name { white-space: normal; min-width: 14rem; text-align: left; }
+tbody tr:hover { background: var(--track); }
+.cls { display: inline-grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 6px; font: 800 0.85rem var(--f-display); }
+.cls.A { background: var(--accent); color: #fff; }
+.cls.B { background: var(--accent-soft); color: var(--accent); }
+.cls.C { background: var(--track); color: var(--ink-2); }
+.minibar { display: inline-block; height: 8px; border-radius: 0 3px 3px 0; background: var(--gap); vertical-align: middle; margin-left: 8px; }
+.share { display: grid; grid-template-columns: minmax(0, 1fr) 3rem; gap: 8px; align-items: center; min-width: 9rem; }
+.share .track { height: 10px; }
+th button { all: unset; cursor: pointer; }
+th button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+th button[aria-sort="descending"]::after { content: " ↓"; }
+th button[aria-sort="ascending"]::after { content: " ↑"; }
+
+/* Filtros */
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin-bottom: 12px; }
+.filters label { display: grid; gap: 3px; font-size: 0.78rem; color: var(--ink-3); font-weight: 600; }
+select, input[type="search"] { font: inherit; font-size: 0.92rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 7px; padding: 6px 10px; min-width: 0; }
+input[type="search"] { width: min(16rem, 100%); }
+select:focus-visible, input:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.count { font-size: 0.85rem; color: var(--ink-2); margin-left: auto; }
+.btn { font: 600 0.9rem var(--f-body); color: var(--accent); background: transparent; border: 1px solid var(--line); border-radius: 7px;
+  padding: 7px 14px; cursor: pointer; margin-top: 12px; }
+.btn:hover { background: var(--accent-soft); }
+
+/* Tooltip */
+.tip { position: absolute; z-index: 5; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 0.82rem; line-height: 1.35;
+  padding: 7px 10px; border-radius: 7px; max-width: 16rem; box-shadow: 0 6px 20px #0003; }
+.tip b { font-weight: 700; }
+
+/* Metodología */
+.method { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; font-size: 0.9rem; color: var(--ink-2); }
+.method h3 { font-size: 0.95rem; color: var(--ink); margin-bottom: 6px; }
+.method ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; }
+.formula { font-family: var(--f-mono); font-size: 0.84rem; color: var(--ink); background: var(--track); border-radius: 6px; padding: 8px 10px; margin: 6px 0; overflow-x: auto; white-space: nowrap; }
+footer { font-size: 0.82rem; color: var(--ink-3); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+footer a { color: var(--accent); }
+
+@media (max-width: 1000px) {
+  .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid-2, .answer, .method { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpi .v { font-size: 1.8rem; }
+  .hbar, .bridge .hbar { grid-template-columns: 6.8rem minmax(0, 1fr) 3.4rem; gap: 8px; }
+  .hbar .lbl { font-size: 0.82rem; }
+  .target-lbl { padding-right: 3.4rem; }
+  .answer, .panel { padding: 16px; }
+  .count { margin-left: 0; width: 100%; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .fill { transition: filter .15s; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <p class="eyebrow">Supermercado ficticio · Lima · un centro de distribución</p>
+      <h1>Clasificación ABC y política de reposición</h1>
+    </div>
+    <div class="meta">
+      <span class="tag" id="tag-sku"></span>
+      <span class="tag">oct-2024 a sep-2026</span>
+      <span class="tag">Soles (S/)</span>
+      <span class="tag sint">Datos sintéticos</span>
+    </div>
+  </header>
+
+  <section class="panel answer" aria-labelledby="respuesta">
+    <div>
+      <p class="eyebrow">Pregunta de negocio</p>
+      <p class="q">¿Qué productos concentran el 80% de las ventas y qué punto de reorden (ROP) necesita cada uno para evitar quiebres sin sobrestockear?</p>
+      <h2 id="respuesta"></h2>
+      <p class="sub" id="respuesta-sub"></p>
+    </div>
+    <div class="ropcompare" aria-label="ROP total actual frente al recomendado">
+      <div class="roprow"><span class="lbl">ROP actual<br>(suma de 500 SKU)</span><div class="bar actual num" id="bar-actual"></div></div>
+      <div class="roprow"><span class="lbl">ROP recomendado<br>(z = 1.65, 95%)</span><div class="bar rec num" id="bar-rec"></div></div>
+      <p class="ropnote" id="rop-note"></p>
+    </div>
+  </section>
+
+  <section class="kpis" aria-label="Indicadores clave" id="kpis"></section>
+
+  <div class="grid-2">
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Pocos productos hacen casi todas las ventas</h2>
+        <p>Curva de Pareto: SKU ordenados de mayor a menor importe vendido en 24 meses. Pasa el cursor para ver cada punto.</p>
+      </div>
+      <div class="chart" id="pareto"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Ninguna categoría llega al 95% de servicio</h2>
+        <p>% de pedidos en los que el stock no llegó a cero mientras se esperaba la entrega (nivel de servicio por ciclo).</p>
+      </div>
+      <div class="hbars" id="servicio"></div>
+      <p class="target-lbl">- - meta 95%</p>
+    </section>
+  </div>
+
+  <div class="grid-2">
+    <section class="panel bridge">
+      <div class="panel-head">
+        <h2>Por qué el ROP actual se queda corto</h2>
+        <p>ROP total en unidades, sumando un factor a la vez. Cada barra naranja es lo que la política actual no considera.</p>
+      </div>
+      <div class="hbars" id="puente"></div>
+      <div class="legend">
+        <span><i style="background:var(--neutral-bar)"></i>ROP actual</span>
+        <span><i style="background:var(--gap)"></i>Unidades que faltan</span>
+        <span><i style="background:var(--accent)"></i>ROP recomendado</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Dónde invertir primero</h2>
+        <p>Inversión adicional = unidades que faltan en el ROP × costo unitario. La clase A concentra la mayor parte.</p>
+      </div>
+      <div class="tscroll">
+        <table id="clases">
+          <thead><tr><th>Clase</th><th>SKU</th><th>% ventas</th><th>Días en quiebre</th><th class="l">Inversión adicional</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel" aria-labelledby="detalle">
+    <div class="panel-head">
+      <h2 id="detalle">Detalle por SKU</h2>
+      <p>ROP actual (stock mínimo vigente) frente al recomendado. Ordenado por inversión adicional; haz clic en un encabezado para reordenar.</p>
+    </div>
+    <div class="filters">
+      <label for="f-cat">Categoría<select id="f-cat"><option value="">Todas</option></select></label>
+      <label for="f-cls">Clase ABC<select id="f-cls"><option value="">Todas</option><option>A</option><option>B</option><option>C</option></select></label>
+      <label for="f-q">Buscar<input type="search" id="f-q" placeholder="SKU o producto"></label>
+      <span class="count" id="f-count"></span>
+    </div>
+    <div class="tscroll">
+      <table id="skus">
+        <thead><tr>
+          <th><button data-k="sku">SKU</button></th>
+          <th class="l"><button data-k="nombre">Producto</button></th>
+          <th><button data-k="clase_abc">Clase</button></th>
+          <th><button data-k="stock_actual">Stock</button></th>
+          <th><button data-k="rop_actual">ROP actual</button></th>
+          <th><button data-k="rop_recomendado">ROP rec.</button></th>
+          <th class="l"><button data-k="brecha">Brecha</button></th>
+          <th><button data-k="inversion" aria-sort="descending">Inversión</button></th>
+          <th><button data-k="quiebre">Días en quiebre</button></th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <button class="btn" id="mas" type="button"></button>
+  </section>
+
+  <section class="panel method" aria-label="Metodología">
+    <div>
+      <h3>Cómo se calcula</h3>
+      <div class="formula">SS = z · √(LT · σd² + d² · σLT²)</div>
+      <div class="formula">ROP = d · LT + SS</div>
+      <p>z = 1.65 (95% por ciclo). d y σd: demanda diaria del último año, con los días sin venta en cero y sin los días en quiebre. LT y σLT: lead time real de cada SKU.</p>
+    </div>
+    <div>
+      <h3>Definiciones</h3>
+      <ul>
+        <li><b>Clase A/B/C:</b> hasta 80% / 95% / 100% del importe acumulado.</li>
+        <li><b>Servicio por ciclo:</b> pedidos sin stock cero mientras se esperaba la entrega.</li>
+        <li><b>OTIF:</b> pedidos recibidos a tiempo y completos.</li>
+        <li><b>Quiebre:</b> stock cero al cierre del día.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Límites del análisis</h3>
+      <ul>
+        <li>Datos sintéticos generados con Python (semilla 42).</li>
+        <li>La brecha de cada SKU no predice cuál quiebra más: el problema afecta a casi todo el surtido.</li>
+        <li>ROP único anual; con picos de temporada conviene uno por temporada.</li>
+        <li>No se evalúa la cantidad de pedido (Q).</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>Fuente: <span class="mono">data/raw/inventario.db</span>, procesado con <span class="mono">src/construir_dashboard.py</span>.</span>
+    <a href="https://github.com/klauss1508-hue/inventario-supermercado">Repositorio en GitHub</a>
+  </footer>
+</div>
+
+<script>
+const D = /*__DATOS__*/null;
+
+const fmt = (v, d = 0) => new Intl.NumberFormat("es-PE", { minimumFractionDigits: d, maximumFractionDigits: d }).format(v);
+const soles = v => "S/ " + fmt(v);
+const milSoles = v => "S/ " + fmt(v / 1000, 1) + " mil";
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const K = D.kpi;
+
+function tooltip(box) {
+  const t = document.createElement("div");
+  t.className = "tip"; t.hidden = true; box.appendChild(t);
+  return {
+    show(html, ev) {
+      t.innerHTML = html; t.hidden = false;
+      const r = box.getBoundingClientRect();
+      let x = ev.clientX - r.left + 14, y = ev.clientY - r.top + 14;
+      if (x + t.offsetWidth > r.width) x = ev.clientX - r.left - t.offsetWidth - 14;
+      t.style.left = Math.max(0, x) + "px"; t.style.top = y + "px";
+    },
+    hide() { t.hidden = true; }
+  };
+}
+
+/* Respuesta */
+const puente = D.puente, ropAct = puente[0].total, ropRec = puente[puente.length - 1].total;
+const clsA = D.clases.find(c => c.clase_abc === "A");
+const pctA = 100 * clsA.inversion / K.inversion;
+$("#tag-sku").textContent = fmt(K.n_sku) + " SKU · 5 categorías";
+$("#respuesta").innerHTML = `Subir el punto de reorden un <em>${fmt(100 * (ropRec / ropAct - 1))}%</em>`;
+$("#respuesta-sub").textContent =
+  `${fmt(K.sku_clase_a)} SKU (${fmt(100 * K.sku_clase_a / K.n_sku)}%) generan el ${fmt(K.pct_importe_a)}% de las ventas. ` +
+  `En ${fmt(K.sku_rop_insuficiente)} de ${fmt(K.n_sku)} SKU el ROP actual es menor que el necesario, así que se pide demasiado tarde.`;
+$("#bar-actual").style.width = (100 * ropAct / ropRec) + "%";
+$("#bar-actual").textContent = fmt(ropAct) + " u.";
+$("#bar-rec").style.width = "100%";
+$("#bar-rec").textContent = fmt(ropRec) + " u.";
+$("#rop-note").innerHTML = `Inversión adicional en stock: <b>${milSoles(K.inversion)}</b>, el ${fmt(pctA)}% en clase A.`;
+
+/* KPIs (máximo 5) */
+const kpis = [
+  { t: "Ventas en clase A", v: fmt(K.pct_importe_a) + "%", d: `del importe sale de ${fmt(K.sku_clase_a)} SKU (${fmt(100 * K.sku_clase_a / K.n_sku)}% del surtido)`, c: ["info", "Concentración"] },
+  { t: "Servicio por ciclo", v: fmt(K.servicio_ciclo, 1) + "%", d: "de los pedidos llega antes del quiebre. Meta: 95%", c: ["crit", "Bajo la meta"] },
+  { t: "SKU bajo stock mínimo", v: fmt(K.sku_bajo_minimo), d: `de ${fmt(K.n_sku)} al 30-sep-2026; ${fmt(K.sku_en_cero)} están en cero`, c: ["warn", "Reponer"] },
+  { t: "Capital inmovilizado", v: milSoles(K.capital), d: `stock × costo; el ${fmt(K.pct_capital_a)}% está en clase A`, c: ["info", "A costo"] },
+  { t: "OTIF de proveedores", v: fmt(K.otif, 1) + "%", d: `de ${fmt(K.n_pedidos)} pedidos llegó a tiempo y completo`, c: ["warn", "1 de cada 3 falla"] },
+];
+$("#kpis").innerHTML = kpis.map(k => `
+  <article class="panel kpi">
+    <p class="eyebrow">${k.t}</p>
+    <p class="v">${k.v}</p>
+    <p class="d">${k.d}</p>
+    <span class="chip ${k.c[0]}">${k.c[1]}</span>
+  </article>`).join("");
+
+/* Pareto (SVG) */
+(function pareto() {
+  const box = $("#pareto"), tip = tooltip(box);
+  const W = 600, H = 330, m = { l: 46, r: 14, t: 26, b: 46 };
+  const n = D.pareto.length, iw = W - m.l - m.r, ih = H - m.t - m.b;
+  const x = p => m.l + p / 100 * iw, y = v => m.t + (1 - v / 100) * ih;
+  const nA = D.pareto.filter(v => v <= 80).length, nB = D.pareto.filter(v => v <= 95).length;
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Curva de Pareto: ${nA} SKU generan el 80% del importe">`;
+  for (let v = 0; v <= 100; v += 20) {
+    s += `<line class="grid" x1="${m.l}" x2="${W - m.r}" y1="${y(v)}" y2="${y(v)}"/>`;
+    s += `<text x="${m.l - 8}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`;
+    s += `<text x="${x(v)}" y="${H - m.b + 18}" text-anchor="middle">${v}%</text>`;
+  }
+  s += `<line class="ax" x1="${m.l}" x2="${W - m.r}" y1="${y(0)}" y2="${y(0)}"/>`;
+  s += `<text x="${m.l + iw / 2}" y="${H - 6}" text-anchor="middle">% de los SKU, de mayor a menor venta</text>`;
+  // Bandas A / B / C
+  [[0, nA, "A"], [nA, nB, "B"], [nB, n, "C"]].forEach(([a, b, c]) => {
+    s += `<text class="band" x="${x(100 * (a + b) / 2 / n)}" y="${m.t - 10}" text-anchor="middle">Clase ${c}</text>`;
+  });
+  [nA, nB].forEach(k => s += `<line class="ref" x1="${x(100 * k / n)}" x2="${x(100 * k / n)}" y1="${m.t - 4}" y2="${y(0)}"/>`);
+  const pts = D.pareto.map((v, i) => `${x(100 * (i + 1) / n).toFixed(1)},${y(v).toFixed(1)}`);
+  s += `<path class="area" d="M${x(0)},${y(0)} L${pts.join(" L")} L${x(100)},${y(0)} Z"/>`;
+  s += `<path class="line" d="M${x(0)},${y(0)} L${pts.join(" L")}"/>`;
+  [[nA, 80], [nB, 95]].forEach(([k, v]) => {
+    s += `<circle class="dot" r="5" cx="${x(100 * k / n)}" cy="${y(D.pareto[k - 1])}"/>`;
+    s += `<text class="lab" x="${x(100 * k / n) + 9}" y="${y(D.pareto[k - 1]) + 18}">${fmt(k)} SKU → ${v}%</text>`;
+  });
+  s += `<line class="cross" id="px" y1="${m.t}" y2="${y(0)}" visibility="hidden"/>`;
+  s += `<circle class="dot" id="pd" r="5" visibility="hidden"/>`;
+  s += `<rect x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent" id="phit"/></svg>`;
+  box.innerHTML = s;
+  const svg = box.querySelector("svg"), px = svg.querySelector("#px"), pd = svg.querySelector("#pd");
+  svg.querySelector("#phit").addEventListener("pointermove", ev => {
+    const p = svg.createSVGPoint(); p.x = ev.clientX; p.y = ev.clientY;
+    const lp = p.matrixTransform(svg.getScreenCTM().inverse());
+    const i = Math.min(n - 1, Math.max(0, Math.round((lp.x - m.l) / iw * n) - 1));
+    const cx = x(100 * (i + 1) / n), cy = y(D.pareto[i]);
+    px.setAttribute("x1", cx); px.setAttribute("x2", cx); px.setAttribute("visibility", "visible");
+    pd.setAttribute("cx", cx); pd.setAttribute("cy", cy); pd.setAttribute("visibility", "visible");
+    const c = i < nA ? "A" : i < nB ? "B" : "C";
+    tip.show(`<b>Top ${fmt(i + 1)} SKU</b> (${fmt(100 * (i + 1) / n, 1)}% del surtido)<br>${fmt(D.pareto[i], 1)}% del importe · clase ${c}`, ev);
+  });
+  svg.querySelector("#phit").addEventListener("pointerleave", () => {
+    tip.hide(); px.setAttribute("visibility", "hidden"); pd.setAttribute("visibility", "hidden");
+  });
+})();
+
+/* Barras horizontales con tooltip */
+function hbars(sel, rows) {
+  const box = $(sel), tip = tooltip(box);
+  box.innerHTML = rows.map((r, i) => `
+    <div class="hbar ${r.cls || ""}" tabindex="0" data-i="${i}" aria-label="${esc(r.aria)}">
+      <span class="lbl">${r.label}</span>
+      <div class="track">${r.track}</div>
+      <span class="val ${r.valCls || ""}">${r.value}</span>
+    </div>`).join("");
+  box.querySelectorAll(".hbar").forEach(el => {
+    el.addEventListener("pointermove", ev => tip.show(rows[el.dataset.i].tip, ev));
+    el.addEventListener("pointerleave", () => tip.hide());
+  });
+}
+
+const cats = [...D.categorias].sort((a, b) => a.servicio_ciclo - b.servicio_ciclo);
+hbars("#servicio", cats.map(c => ({
+  label: c.categoria,
+  value: fmt(c.servicio_ciclo, 1) + "%",
+  track: `<div class="fill" style="width:${c.servicio_ciclo}%"></div><div class="target" style="left:95%"></div>`,
+  aria: `${c.categoria}: ${fmt(c.servicio_ciclo, 1)}% de servicio por ciclo`,
+  tip: `<b>${esc(c.categoria)}</b><br>Servicio por ciclo: ${fmt(c.servicio_ciclo, 1)}%<br>Días en quiebre: ${fmt(c.quiebre, 1)}%<br>Inversión adicional: ${soles(c.inversion)}`,
+})));
+
+const explica = {
+  "Demanda real": "Usar la demanda y la variabilidad medidas en el último año (con z = 1 y el lead time planificado de hoy).",
+  "z = 1.65": "Subir el nivel de servicio objetivo de z = 1.0 (≈84%) a z = 1.65 (95%).",
+  "Lead time real": "Usar el lead time real promedio: los proveedores tardan más de lo planificado.",
+  "Variabilidad del lead time": "Sumar el término d²·σLT²: los retrasos no son constantes.",
+};
+const maxP = ropRec * 1.02;
+hbars("#puente", puente.map((p, i) => {
+  if (i === 0) return { label: "ROP actual", value: fmt(p.total), cls: "total",
+    track: `<div class="fill base" style="width:${100 * p.total / maxP}%"></div>`,
+    aria: `ROP actual: ${fmt(p.total)} unidades`, tip: `<b>ROP actual</b><br>${fmt(p.total)} unidades: stock mínimo vigente de los 500 SKU.` };
+  const prev = puente[i - 1].total, delta = p.total - prev;
+  return { label: "+ " + p.paso, value: "+" + fmt(delta), valCls: "plus",
+    track: `<div class="fill step" style="left:${100 * prev / maxP}%;width:${100 * delta / maxP}%"></div>`,
+    aria: `${p.paso}: más ${fmt(delta)} unidades`, tip: `<b>+${fmt(delta)} unidades</b><br>${explica[p.paso]}` };
+}).concat([{ label: "ROP recomendado", value: fmt(ropRec), cls: "total",
+  track: `<div class="fill final" style="width:${100 * ropRec / maxP}%"></div>`,
+  aria: `ROP recomendado: ${fmt(ropRec)} unidades`, tip: `<b>ROP recomendado</b><br>${fmt(ropRec)} unidades (+${fmt(100 * (ropRec / ropAct - 1))}% sobre el actual).` }]));
+
+/* Tabla por clase */
+const totImp = D.clases.reduce((a, c) => a + c.importe, 0);
+$("#clases tbody").innerHTML = D.clases.map(c => {
+  const sh = 100 * c.inversion / K.inversion;
+  return `<tr>
+    <td><span class="cls ${c.clase_abc}">${c.clase_abc}</span></td>
+    <td>${fmt(c.n_sku)}</td>
+    <td>${fmt(100 * c.importe / totImp)}%</td>
+    <td>${fmt(c.quiebre, 1)}%</td>
+    <td class="l"><div class="share"><div><div class="num">${soles(c.inversion)}</div><div class="track"><div class="fill" style="width:${sh}%;background:var(--gap)"></div></div></div><span>${fmt(sh)}%</span></div></td>
+  </tr>`;
+}).join("");
+
+/* Tabla por SKU con filtros y orden */
+const st = { cat: "", cls: "", q: "", key: "inversion", dir: -1, all: false };
+const PASO = 15;
+[...new Set(D.skus.map(s => s.categoria))].sort().forEach(c => $("#f-cat").insertAdjacentHTML("beforeend", `<option>${esc(c)}</option>`));
+const maxBrecha = Math.max(...D.skus.map(s => s.brecha));
+function renderSkus() {
+  const q = st.q.trim().toLowerCase();
+  const rows = D.skus.filter(s => (!st.cat || s.categoria === st.cat) && (!st.cls || s.clase_abc === st.cls) &&
+    (!q || s.sku.toLowerCase().includes(q) || s.nombre.toLowerCase().includes(q)))
+    .sort((a, b) => (a[st.key] > b[st.key] ? 1 : a[st.key] < b[st.key] ? -1 : 0) * st.dir);
+  const vis = st.all ? rows : rows.slice(0, PASO);
+  $("#skus tbody").innerHTML = vis.map(s => `<tr>
+    <td class="mono">${s.sku}</td>
+    <td class="name">${esc(s.nombre)}<br><small style="color:var(--ink-3)">${esc(s.categoria)}</small></td>
+    <td><span class="cls ${s.clase_abc}">${s.clase_abc}</span></td>
+    <td>${fmt(s.stock_actual)}</td>
+    <td>${fmt(s.rop_actual)}</td>
+    <td><b>${fmt(s.rop_recomendado)}</b></td>
+    <td class="l">+${fmt(s.brecha)} <span class="minibar" style="width:${Math.max(2, 60 * Math.sqrt(s.brecha / maxBrecha))}px"></span></td>
+    <td>${soles(s.inversion)}</td>
+    <td>${fmt(s.quiebre, 1)}%</td>
+  </tr>`).join("") || `<tr><td colspan="9" class="l">Ningún SKU coincide con los filtros. Prueba con otra categoría o borra la búsqueda.</td></tr>`;
+  $("#f-count").textContent = `${fmt(vis.length)} de ${fmt(rows.length)} SKU`;
+  const btn = $("#mas");
+  btn.hidden = rows.length <= PASO;
+  btn.textContent = st.all ? `Mostrar solo los ${PASO} primeros` : `Mostrar los ${fmt(rows.length)} SKU`;
+}
+$("#f-cat").addEventListener("change", e => { st.cat = e.target.value; renderSkus(); });
+$("#f-cls").addEventListener("change", e => { st.cls = e.target.value; renderSkus(); });
+$("#f-q").addEventListener("input", e => { st.q = e.target.value; renderSkus(); });
+$("#mas").addEventListener("click", () => { st.all = !st.all; renderSkus(); });
+document.querySelectorAll("#skus th button").forEach(b => b.addEventListener("click", () => {
+  const k = b.dataset.k;
+  st.dir = st.key === k ? -st.dir : (["sku", "nombre", "clase_abc"].includes(k) ? 1 : -1);
+  st.key = k;
+  document.querySelectorAll("#skus th button").forEach(o => o.removeAttribute("aria-sort"));
+  b.setAttribute("aria-sort", st.dir === 1 ? "ascending" : "descending");
+  renderSkus();
+}));
+renderSkus();
+</script>
+</html>
