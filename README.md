@@ -9,7 +9,7 @@ Proyecto de portafolio (en construcción) sobre un supermercado **ficticio** de 
 Requisitos: Python 3.10 o superior.
 
 ```bash
-git clone https://github.com/<tu-usuario>/inventario-supermercado.git
+git clone https://github.com/klauss1508-hue/inventario-supermercado.git
 cd inventario-supermercado
 python -m venv .venv
 # Windows: .venv\Scripts\activate   |   Mac/Linux: source .venv/bin/activate
