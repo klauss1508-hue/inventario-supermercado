@@ -2,7 +2,7 @@
 
 Análisis de inventario de un supermercado **ficticio** de Lima (500 SKU, 24 meses). **Resultado:** la política de reposición actual solo evita el quiebre en el 74% de los pedidos; subir el punto de reorden un 45% (S/ 20.5 mil, 69% en clase A) permite apuntar a un 95% de nivel de servicio.
 
-![Dashboard de reposición](docs/images/00_dashboard.png)
+![Dashboard de reposición en Power BI](docs/images/04_dashboard_powerbi.png)
 
 > Los datos son **sintéticos**, generados con `src/generar_datos.py`. Las marcas y los proveedores son inventados y no representan a ninguna empresa real.
 
@@ -30,7 +30,7 @@ La demanda simulada sigue una distribución tipo Pareto, con volatilidad distint
 
 - **SQL (SQLite):** 10 consultas numeradas y comentadas en `sql/`.
 - **Python (pandas, NumPy, Matplotlib) en Jupyter:** validación, análisis y cálculo del ROP en `notebooks/`.
-- **HTML + JavaScript:** dashboard interactivo en `dashboard/`, generado desde la base con `src/construir_dashboard.py`.
+- **Power BI:** dashboard en `dashboardinventario.pbix`, con 5 KPIs en medidas DAX, filtros por clase ABC y categoría, y gráficos de la brecha.
 
 ## Metodología
 
@@ -96,9 +96,6 @@ python src/generar_datos.py --seed 42 --n-sku 500
 
 # 2. Ejecuta el análisis (también se puede abrir en VS Code o Jupyter)
 jupyter nbconvert --to notebook --execute --inplace notebooks/01_analisis_reposicion.ipynb
-
-# 3. Regenera el dashboard
-python src/construir_dashboard.py
 ```
 
 La misma semilla produce siempre los mismos datos. `inventario.db` no se sube al repositorio porque pesa unos 35 MB; el paso 1 la vuelve a crear.
@@ -109,18 +106,18 @@ Las consultas de `sql/` (dialecto SQLite) se ejecutan contra `data/raw/inventari
 sqlite3 data/raw/inventario.db < sql/02_clasificacion_abc.sql
 ```
 
-El dashboard es un solo archivo: abre `dashboard/index.html` en el navegador.
+El dashboard se abre con Power BI Desktop (gratuito, para Windows): abre `dashboardinventario.pbix`. Para actualizar los datos en otra computadora, cambia la ruta de los CSV en **Transformar datos > Configuración de origen de datos**.
 
 ## Estructura
 
-| Carpeta | Contenido |
+| Ubicación | Contenido |
 |---|---|
-| `src/` | Generador de datos sintéticos y script que construye el dashboard |
+| `src/` | Generador de datos sintéticos |
 | `data/raw/` | CSV de las 5 tablas y una muestra en Excel |
 | `data/processed/` | `reposicion_por_sku.csv`: stock de seguridad, ROP recomendado y brecha por SKU |
 | `sql/` | 10 consultas: ventas, ABC, quiebres, OTIF, cobertura, capital inmovilizado, margen y rotación |
 | `notebooks/` | Análisis completo del stock de seguridad y el ROP |
-| `dashboard/` | Plantilla y dashboard HTML generado |
+| `dashboardinventario.pbix` | Dashboard de Power BI |
 | `docs/images/` | Gráficos y capturas del README |
 
 ## Autor
