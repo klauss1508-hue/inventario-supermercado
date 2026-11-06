@@ -4,8 +4,11 @@ __pycache__/
 .venv/
 venv/
 .DS_Store
-# Archivo pesado: se regenera con src/generar_datos.py
+# Archivo pesado: no se sube al repositorio
 data/raw/*.db
 # Notas de trabajo con el asistente de IA (solo locales)
 CLAUDE.md
 .claude/
+# Solo locales: no forman parte del repositorio publicado
+src/
+requirements.txt

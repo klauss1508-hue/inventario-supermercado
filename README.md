@@ -4,7 +4,7 @@ Análisis de inventario de un supermercado **ficticio** de Lima (500 SKU, 24 mes
 
 ![Dashboard de reposición en Power BI](docs/images/04_dashboard_powerbi.png)
 
-> Los datos son **sintéticos**, generados con `src/generar_datos.py`. Las marcas y los proveedores son inventados y no representan a ninguna empresa real.
+> Los datos son **sintéticos**, generados con un script propio en Python. Las marcas y los proveedores son inventados y no representan a ninguna empresa real.
 
 ## Pregunta de negocio
 
@@ -80,39 +80,16 @@ La demanda simulada sigue una distribución tipo Pareto, con volatilidad distint
 - No se evalúa la cantidad de pedido (Q). Si hay sobrestock, vendría de Q y no del ROP.
 - "Quiebre" es stock cero al cierre del día. La demanda perdida no se registra, así que se mide disponibilidad y no ventas perdidas.
 
-## Cómo ejecutarlo
+## Cómo revisarlo
 
-Requisitos: Python 3.10 o superior.
-
-```bash
-git clone https://github.com/klauss1508-hue/inventario-supermercado.git
-cd inventario-supermercado
-python -m venv .venv
-# Windows: .venv\Scripts\activate   |   Mac/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-
-# 1. Genera los CSV, el Excel y la base SQLite inventario.db en data/raw/
-python src/generar_datos.py --seed 42 --n-sku 500
-
-# 2. Ejecuta el análisis (también se puede abrir en VS Code o Jupyter)
-jupyter nbconvert --to notebook --execute --inplace notebooks/01_analisis_reposicion.ipynb
-```
-
-La misma semilla produce siempre los mismos datos. `inventario.db` no se sube al repositorio porque pesa unos 35 MB; el paso 1 la vuelve a crear.
-
-Las consultas de `sql/` (dialecto SQLite) se ejecutan contra `data/raw/inventario.db`, por ejemplo con la extensión SQLite de VS Code, con [DB Browser for SQLite](https://sqlitebrowser.org/) o con:
-
-```bash
-sqlite3 data/raw/inventario.db < sql/02_clasificacion_abc.sql
-```
-
-El dashboard se abre con Power BI Desktop (gratuito, para Windows): abre `dashboardinventario.pbix`. Para actualizar los datos en otra computadora, cambia la ruta de los CSV en **Transformar datos > Configuración de origen de datos**.
+- **Dashboard:** abre `dashboardinventario.pbix` con Power BI Desktop (gratuito, para Windows). Para actualizar los datos en otra computadora, cambia la ruta de los CSV en **Transformar datos > Configuración de origen de datos**.
+- **Análisis:** `notebooks/01_analisis_reposicion.ipynb` se puede leer directamente en GitHub, con sus resultados y gráficos.
+- **Consultas SQL:** las de `sql/` están en dialecto SQLite y usan las tablas de `data/raw/`. La base `inventario.db` no se incluye porque pesa unos 35 MB; para ejecutarlas, carga los CSV en una base SQLite, por ejemplo con [DB Browser for SQLite](https://sqlitebrowser.org/).
 
 ## Estructura
 
 | Ubicación | Contenido |
 |---|---|
-| `src/` | Generador de datos sintéticos |
 | `data/raw/` | CSV de las 5 tablas y una muestra en Excel |
 | `data/processed/` | `reposicion_por_sku.csv`: stock de seguridad, ROP recomendado y brecha por SKU |
 | `sql/` | 10 consultas: ventas, ABC, quiebres, OTIF, cobertura, capital inmovilizado, margen y rotación |
